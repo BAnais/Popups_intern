@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event){
   document.getElementById('subSend').onclick= function openSend() {
     alert("Expédition");
   };
-  document.getElementById('subReceive').onclick= function openSend() {
+  document.getElementById('subReturn').onclick= function openSend() {
     alert("Retour");
   };
   document.getElementById('subSav').onclick= function openSend() {
