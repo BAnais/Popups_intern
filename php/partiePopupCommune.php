@@ -61,7 +61,7 @@
         <input type="date" name="dateLivraison">
       </div>
       <div class="col-sm-2">
-        <label>Horaire</label>
+        <label>Horaire (24h format)</label>
       </div>
       <div class="col-sm-4">
 						<select name="heure">
