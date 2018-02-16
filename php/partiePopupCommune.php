@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <script src="../js/...js" charset="utf-8"></script>
+<!--  <script src="../js/...js" charset="utf-8"></script>-->
   <script
   src="http://code.jquery.com/jquery-3.3.1.slim.min.js"
   integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
@@ -22,6 +22,7 @@
       <label for="transporteurChoice2">DHL Express</label>
     </div>
   </div>
+
     <div class="row" id="transporteurConditionYes">
       <div class="col-sm-4">
         <label>Bon UPS : </label>
@@ -32,6 +33,9 @@
         <input type="radio" name="bonUPS" value="Non" id="bonUPSChoice2">
         <label for="bonUPSChoice2">Non</label>
       </div>
+    </div>
+
+    <div class="row">
 
     </div>
 </div>
