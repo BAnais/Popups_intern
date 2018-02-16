@@ -43,6 +43,15 @@
           <label for="deploiementNo">Non</label>
         </div>
     </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <label>N° Devis : </label>
+      </div>
+      <div class="col-lg-8">
+        <input type="text" name="numeroDevis" placeholder="132456879">
+      </div>
+    </div>
   </div>
 </body>
 </html>
