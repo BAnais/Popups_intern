@@ -101,6 +101,19 @@
         </div>
       </div>
 
+      <div class="row">
+        <div class="col-sm-4">
+          <label>Langue</label>
+        </div>
+        <div class="col-sm-8">
+          <input type="radio" name="FR" value="FR" id="FR1">
+          <label for="FR1">FR</label>
+          <input type="radio" name="EN" value="EN" id="EN1">
+          <label for="EN1">EN</label>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </body>
