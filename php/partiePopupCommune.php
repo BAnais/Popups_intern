@@ -91,40 +91,38 @@
           <?php endfor; ?>
         </select>
       </div>
-
-      <div class="row">
-        <div class="col-lg-4">
-          <label>Raison d'envoi</label>
-        </div>
-        <div class="col-lg-8">
-          <textarea name="raisonEnvoi" rows="10" cols="80" readonly="false" placeholder="Entrez la raison de l'envoi ici" ></textarea>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4">
-          <label>Langue</label>
-        </div>
-        <div class="col-lg-8">
-          <input type="radio" name="FR" value="FR" id="FR1">
-          <label for="FR1">FR</label>
-          <input type="radio" name="EN" value="EN" id="EN1">
-          <label for="EN1">EN</label>
-        </div>
-      </div>
-      <div class="row">
-
-        <div class="row">
-          <div class="col-lg-4">
-            <label>Mail CC</label>
-          </div>
-          <div class="col-lg-8">
-            <input type="email" name="emailCC" placeholder="exemple@entreprise.fr">
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <label>Raison d'envoi</label>
+      </div>
+      <div class="col-lg-8">
+        <textarea name="raisonEnvoi" rows="5" cols="80" readonly="false" placeholder="Entrez la raison de l'envoi ici" ></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <label>Langue</label>
+      </div>
+      <div class="col-lg-8">
+        <input type="radio" name="FR" value="FR" id="FR1">
+        <label for="FR1">FR</label>
+        <input type="radio" name="EN" value="EN" id="EN1">
+        <label for="EN1">EN</label>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-lg-4">
+        <label>Mail CC</label>
+      </div>
+      <div class="col-lg-8">
+        <input type="email" name="emailCC" placeholder="exemple@entreprise.fr">
+      </div>
+    </div>
+
   </div>
 </body>
 </html>
