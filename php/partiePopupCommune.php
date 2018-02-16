@@ -64,8 +64,6 @@
         <label>Horaire</label>
       </div>
       <div class="col-sm-3">
-
-						<label for="f_nom_arret">Heure de livraison : </label>					
 						<select name="heure">
 							<option value="h">heure</option>
 							<?php for ($heure = 00 ; $heure <= 23 ; $heure++):
