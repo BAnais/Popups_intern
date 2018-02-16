@@ -43,6 +43,15 @@
         <input type="text" name="numSuivi" placeholder="123456789">
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <label>Prix Transporteur</label>
+      </div>
+      <div class="col-sm-8">
+        <input type="text" name="prixTransporteur" placeholder="XXX €">
+      </div>
+    </div>
   </div>
 </body>
 </html>
