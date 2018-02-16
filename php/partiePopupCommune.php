@@ -52,6 +52,15 @@
         <input type="text" name="prixTransporteur" placeholder="XXX €">
       </div>
     </div>
+    
+    <div class="row">
+      <div class="col-sm-4">
+        <label>Date d'envoi</label>
+      </div>
+      <div class="col-sm-8">
+        <input type="date" name="dateEnvoi" value="">
+      </div>
+    </div>
 
     <div class="row">
       <div class="col-sm-3">
@@ -83,14 +92,7 @@
 					</select>
       </div>
 
-      <div class="row">
-        <div class="col-sm-4">
-          <label>Date d'envoi</label>
-        </div>
-        <div class="col-sm-8">
-          <input type="date" name="dateEnvoi" value="">
-        </div>
-      </div>
+
 
     </div>
   </div>
