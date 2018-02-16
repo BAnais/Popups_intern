@@ -73,23 +73,23 @@
         <label>Horaire (24h format)</label>
       </div>
       <div class="col-lg-4">
-					<select name="heure">
-						<option value="h">heure</option>
-						<?php for ($heure = 00 ; $heure <= 23 ; $heure++):
-							$hour = sprintf("%02d", $heure);
-						?>
-						<option value="<?php echo $hour ?>"><?=$hour;?></option>
-						<?php endfor; ?>
-					</select>
+        <select name="heure">
+          <option value="h">heure</option>
+          <?php for ($heure = 00 ; $heure <= 23 ; $heure++):
+            $hour = sprintf("%02d", $heure);
+            ?>
+            <option value="<?php echo $hour ?>"><?=$hour;?></option>
+          <?php endfor; ?>
+        </select>
 
-					<select name="minutes">
-						<option value="min">minutes</option>
-						<?php for ($minutes = 00 ; $minutes <= 59 ; $minutes++):
-							$min = sprintf("%02d", $minutes);
-						?>
-						<option value="<?=$min ?>"><?=$min;?></option>
-					<?php endfor; ?>
-					</select>
+        <select name="minutes">
+          <option value="min">minutes</option>
+          <?php for ($minutes = 00 ; $minutes <= 59 ; $minutes++):
+            $min = sprintf("%02d", $minutes);
+            ?>
+            <option value="<?=$min ?>"><?=$min;?></option>
+          <?php endfor; ?>
+        </select>
       </div>
 
       <div class="row">
@@ -111,6 +111,8 @@
           <input type="radio" name="EN" value="EN" id="EN1">
           <label for="EN1">EN</label>
         </div>
+      </div>
+      <div class="row">
 
         <div class="row">
           <div class="col-lg-4">
