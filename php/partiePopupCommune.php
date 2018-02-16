@@ -112,6 +112,14 @@
           <label for="EN1">EN</label>
         </div>
 
+        <div class="row">
+          <div class="col-sm-4">
+            <label>Mail CC</label>
+          </div>
+          <div class="col-sm-8">
+            <input type="email" name="emailCC" placeholder="exemple@entreprise.fr">
+          </div>
+        </div>
       </div>
 
     </div>
