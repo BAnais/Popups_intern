@@ -16,16 +16,22 @@
       <label>Transporteur : </label>
     </div>
     <div class="col-sm-8">
-
       <input  type="radio" name="transporteur" value="UPS" id="transporteurChoice1">
       <label for="transporteurChoice1">UPS</label>
-      <input type="radio" name="transporteur2" value="DHL_Express" id="transporteurChoice2">
+      <input type="radio" name="transporteur" value="DHL_Express" id="transporteurChoice2">
       <label for="transporteurChoice2">DHL Express</label>
-
     </div>
   </div>
-    <div class="col-sm-8" id="transporteurConditionYes">
-
+    <div class="row" id="transporteurConditionYes">
+      <div class="col-sm-4">
+        <label>Bon UPS : </label>
+      </div>
+      <div class="col-sm-8">
+        <input type="radio" name="bonUPS" value="Oui" id="bonUPSChoice1">
+        <label for="bonUPSChoice1">Oui</label>
+        <input type="radio" name="bonUPS" value="Non" id="bonUPSChoice2">
+        <label for="bonUPSChoice2">Non</label>
+      </div>
 
     </div>
 </div>
