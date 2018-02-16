@@ -5,17 +5,17 @@
 <body>
   <div class="container">
 
-  <div class="row">
-    <div class="col-sm-4">
-      <label>Transporteur : </label>
+    <div class="row">
+      <div class="col-sm-4">
+        <label>Transporteur : </label>
+      </div>
+      <div class="col-sm-8">
+        <input  type="radio" name="transporteur" value="Transporteur1" id="transporteurChoice1">
+        <label for="transporteurChoice1">Transporteur1</label>
+        <input type="radio" name="transporteur" value="Transporteur2" id="transporteurChoice2">
+        <label for="transporteurChoice2">Transporteur2</label>
+      </div>
     </div>
-    <div class="col-sm-8">
-      <input  type="radio" name="transporteur" value="Transporteur1" id="transporteurChoice1">
-      <label for="transporteurChoice1">Transporteur1</label>
-      <input type="radio" name="transporteur" value="Transporteur2" id="transporteurChoice2">
-      <label for="transporteurChoice2">Transporteur2</label>
-    </div>
-  </div>
 
     <div class="row" id="transporteurConditionYes">
       <div class="col-sm-4">
@@ -29,10 +29,15 @@
       </div>
     </div>
 
-    <div class="row">
-
+    <div class="row" >
+      <div class="col-sm-4">
+        <label>N° Suivi</label>
+      </div>
+      <div class="col-sm-8">
+        <input type="text" name="numSuivi" placeholder="123456789">
+      </div>
     </div>
-</div>
+  </div>
 </body>
 </html>
 <?php
