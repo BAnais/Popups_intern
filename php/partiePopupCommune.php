@@ -52,7 +52,7 @@
         <input type="text" name="prixTransporteur" placeholder="XXX €">
       </div>
     </div>
-    
+
     <div class="row">
       <div class="col-sm-4">
         <label>Date d'envoi</label>
@@ -92,7 +92,14 @@
 					</select>
       </div>
 
-
+      <div class="row">
+        <div class="col-sm-4">
+          <label>Raison d'envoi</label>
+        </div>
+        <div class="col-sm-8">
+          <textarea name="raisonEnvoi" rows="10" cols="80" readonly="false" placeholder="Entrez la raison de l'envoi ici" ></textarea>
+        </div>
+      </div>
 
     </div>
   </div>
