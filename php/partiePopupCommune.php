@@ -63,10 +63,10 @@
     </div>
 
     <div class="row">
-      <div class="col-lg-3">
+      <div class="col-lg-4">
         <label>Date livraison</label>
       </div>
-      <div class="col-lg-3">
+      <div class="col-lg-2">
         <input type="date" name="dateLivraison">
       </div>
       <div class="col-lg-2">
