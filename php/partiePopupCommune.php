@@ -63,7 +63,7 @@
       <div class="col-sm-2">
         <label>Horaire</label>
       </div>
-      <div class="col-sm-2">
+      <div class="col-sm-4">
 						<select name="heure">
 							<option value="h">heure</option>
 							<?php for ($heure = 00 ; $heure <= 23 ; $heure++):
