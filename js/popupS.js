@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event){
 
-  document.getElementsByTagName('Send').onclick= function openSend() {
+  document.getElementById('Send').onclick= function openSend() {
     window.open("../php/popupTemplate.php");
   };
 
