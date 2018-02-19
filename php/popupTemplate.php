@@ -14,7 +14,7 @@
   <div class="container">
     <?php
     $typeCategorie=$POST['type'];
-    include ($typeCategorie.'.php');
+    include ('./'.$typeCategorie.'.php');
      ?>
   </div>
 </body>
