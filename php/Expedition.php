@@ -20,3 +20,7 @@ include '../html/communAetBPopup.html';
     <input type="text" name="prix" placeholder=" affichage bdd">
   </div>
 </div>
+<?php
+include 'partiePopupCommune.php';
+
+ ?>
