@@ -1,3 +1,6 @@
+<?php
+include '../html/communAetBPopup.html';
+ ?>
 <div class="row">
     <div class="col-lg-4">
       <label>Configuré : </label>
