@@ -1,3 +1,4 @@
+
 <div class="row">
   <div class="col-lg-4">
     <label>Expédition : </label>
@@ -9,3 +10,6 @@
     <label for="expNo">Non</label>
   </div>
 </div>
+<?php
+include 'partiePopupCommune.php';
+ ?>
