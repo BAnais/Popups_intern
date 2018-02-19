@@ -1,7 +1,3 @@
-<?php
-
-
- ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +13,8 @@
 <body>
   <div class="container">
     <?php
-    include '';
+    $typeCategorie=$POST['type'];
+    include ($typeCategorie.'.php');
      ?>
   </div>
 </body>
