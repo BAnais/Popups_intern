@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event){
 
-//  window.onload(function(){
-    //document.title="Expédition"
-//    window.open("../php/popupTemplate.php", 'Popup','height=200, width=150');
-//  });
+function openPopup(){
+  window.open("window.open('about:blank', 'Popup', 'width=200,height=700,scollbars=1,resizable=0');")
+}
 });
