@@ -1,3 +1,7 @@
+<?php
+include '../html/communAetBPopup.html';
+ ?>
+
 <div class="row">
   <div class="col-lg-4">
     <label>Matériel Connu : </label>
@@ -17,3 +21,6 @@
     <input type="text" name="numSerie" placeholder="affichage bdd"> <!-- si inconnu dans bdd alors afficher "inconnu"-->
   </div>
 </div>
+<?php
+include 'partiePopupCommune.php';
+ ?>
