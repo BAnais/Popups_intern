@@ -13,7 +13,7 @@
 <body>
   <div class="container">
     <?php
-    $typeCategorie=$POST['type'];
+    $typeCategorie=$_POST['type'];
     include ('./'.$typeCategorie.'.php');
      ?>
   </div>
