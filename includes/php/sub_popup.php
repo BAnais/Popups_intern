@@ -53,15 +53,15 @@
       <div class="col-sm-3">
         <label>Date livraison</label>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-6">
         <input type="date" name="dateLivraison">
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-2">
-        <label>Horaire:</label>
-      </div>
       <div class="col-sm-3">
+        <label>Horaire :</label>
+      </div>
+      <div class="col-sm-6">
         <select name="heure">
           <option value="h">heure</option>
           <?php for ($heure = 00 ; $heure <= 24 ; $heure++):
