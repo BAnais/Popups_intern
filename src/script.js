@@ -17,5 +17,5 @@ console.log("Document chargé");
 */
 window.onload = function() {
     if (window.jQuery) {
-        alert("Jquery OK");
+        alert(" Jquery OK");
     } }
