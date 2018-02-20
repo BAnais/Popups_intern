@@ -57,13 +57,13 @@
         <input type="date" name="dateLivraison">
       </div>
       <div class="col-sm-3">
-        <label>Horaire (33h format)</label>
+        <label>Horaire (24h format)</label>
       </div>
       <div class="col-sm-3">
         <select name="heure">
           <option value="h">heure</option>
-          <?php for ($heure = 00 ; $heure <= 33 ; $heure++):
-            $hour = sprintf("%03d", $heure);
+          <?php for ($heure = 00 ; $heure <= 24 ; $heure++):
+            $hour = sprintf("%02d", $heure);
             ?>
             <option value="<?php echo $hour ?>"><?=$hour;?></option>
           <?php endfor; ?>
@@ -72,7 +72,7 @@
         <select name="minutes">
           <option value="min">minutes</option>
           <?php for ($minutes = 00 ; $minutes <= 59 ; $minutes++):
-            $min = sprintf("%03d", $minutes);
+            $min = sprintf("%02d", $minutes);
             ?>
             <option value="<?=$min ?>"><?=$min;?></option>
           <?php endfor; ?>
