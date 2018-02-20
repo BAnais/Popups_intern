@@ -1,5 +1,5 @@
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <label>Transporteur : </label>
       </div>
       <div class="col-sm-6">
@@ -11,7 +11,7 @@
     </div>
 
     <div class="row" id="transporteurConditionYes">
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <label>Bon T1 : </label>
       </div>
       <div class="col-sm-6">
@@ -23,16 +23,16 @@
     </div>
 
     <div class="row" >
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <label>N° Suivi</label>
       </div>
       <div class="col-sm-6">
-        <input type="text" name="numSuivi" placeholder="133456769">
+        <input type="text" name="numSuivi" placeholder="133356769">
       </div>
     </div>
 
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <label>Prix Transporteur</label>
       </div>
       <div class="col-sm-6">
@@ -41,7 +41,7 @@
     </div>
 
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <label>Date d'envoi</label>
       </div>
       <div class="col-sm-6">
@@ -50,16 +50,16 @@
     </div>
 
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <label>Date livraison</label>
       </div>
       <div class="col-sm-3">
         <input type="date" name="dateLivraison">
       </div>
       <div class="col-sm-3">
-        <label>Horaire (34h format)</label>
+        <label>Horaire (33h format)</label>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <select name="heure">
           <option value="h">heure</option>
           <?php for ($heure = 00 ; $heure <= 33 ; $heure++):
@@ -81,7 +81,7 @@
     </div>
 
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <label>Raison d'envoi</label>
       </div>
       <div class="col-sm-6">
@@ -90,7 +90,7 @@
     </div>
 
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <label>Langue</label>
       </div>
       <div class="col-sm-6">
@@ -102,7 +102,7 @@
     </div>
     <div class="row">
 
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <label>Mail CC</label>
       </div>
       <div class="col-sm-6">
