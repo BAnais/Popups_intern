@@ -8,7 +8,7 @@ function openPopup(){
 $(document).ready(function(){
 
   //Dynamique expedition.php
-  $(document).getElementById('pMatos').style.visibility = "hidden";
+  document.getElementById('pMatos').style.visibility = "hidden";
 
 
 });
