@@ -14,22 +14,23 @@ $(document).ready(function(){
   //sub_popup
   document.getElementById('transporteurConditionYesRow').style.display="none";
   switch (document.title) {
-    case Expedition:
+    case "Expedition":
     // expedition.php
     document.getElementById('pMatos').style.display = "none";
     break;
 
-    case Retour:
+    case "Retour":
     //Retour
     document.getElementById('numSerieRow').style.display="none";
     break;
 
-    case SAV:
+    case "SAV":
     //sav
     document.getElementById('savExpYesRow').style.display="none";
     break;
-    default:
 
+    default:
+    break;
   }
 
 
