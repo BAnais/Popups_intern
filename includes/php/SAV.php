@@ -10,6 +10,8 @@
     <label for="expNo">Non</label>
   </div>
 </div>
-<?php
+<div class="row" id="savExpYesRow">
+  <?php
 include 'sub_popup.php';
  ?>
+</div>
