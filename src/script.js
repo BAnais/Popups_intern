@@ -40,6 +40,7 @@ $(document).ready(function(){
 
 //on select Exp ou Ret
 //affichage nb colis si groupe = Yes
+console.log($('#EnvGroupYes').checked);
 if(document.getElementById('EnvGroupYes').checked){
   document.getElementById('nbColisRow').style.display="block";
 }else if(document.getElementById('EnvGroupNo').checked){
