@@ -40,13 +40,15 @@ $(document).ready(function(){
 
 //on select Exp ou Ret
 //affichage nb colis si groupe = Yes
-console.log($('#EnvGroupYes').checked);
-if(document.getElementById('EnvGroupYes').checked){
-  document.getElementById('nbColisRow').style.display="block";
-}else if(document.getElementById('EnvGroupNo').checked){
-  if(document.getElementById('nbColisRow').style.display != "none"){
-    document.getElementById('nbColisRow').style.display="none";
-  }
+/*$('input[type="radio"]').on('click',function(){
+	console.log(document.getElementById('EnvGroupYes').checked)
+})*/
+$('input[type="radio"]').on('click',function(){
+
+if($('#EnvGroupYes').prop('checked')){
+	$('#nbColisRow').css('display',"block");
+}else if ($('#EnvGroupNo').prop('checked')){//bizarre ton else if oups haha
+$('#nbColisRow').css('display',"none");
 }
 
 
