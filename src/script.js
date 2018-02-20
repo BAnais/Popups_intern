@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function(event){
 $(document).ready(function(){
   console.log("Document chargé");
 
-
   //sub_popup
   document.getElementById('transporteurConditionYesRow').style.display="none";
+
   switch (document.title) {
     case "Expedition":
     // expedition.php
@@ -36,9 +36,19 @@ $(document).ready(function(){
     default:
     break;
   }
-
-
 });
+
+//on select Exp ou Ret
+//affichage nb colis si groupe = Yes
+if(document.getElementById('EnvGroupYes').checked){
+  document.getElementById('nbColisRow').style.display="block";
+}else if(document.getElementById('EnvGroupNo').checked){
+  if(document.getElementById('nbColisRow').style.display != "none"){
+    document.getElementById('nbColisRow').style.display="none";
+  }
+}
+
+
 
 
 });
