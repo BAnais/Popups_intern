@@ -1,5 +1,5 @@
 <?php
-include '../html/communAetBPopup.html';
+include '../html/sub_popup_Exp_Ret.html';
  ?>
 
 <div class="row">
@@ -22,5 +22,5 @@ include '../html/communAetBPopup.html';
   </div>
 </div>
 <?php
-include 'partiePopupCommune.php';
+include './sub_popup.php';
  ?>

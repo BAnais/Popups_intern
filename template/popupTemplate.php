@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <script src="../js/popupS.js" charset="utf-8"></script>
+  <script src="../src/script.js" charset="utf-8"></script>
   <script
   src="http://code.jquery.com/jquery-3.3.1.slim.min.js"
   integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
@@ -14,7 +14,7 @@
   <div class="container">
     <?php
     $typeCategorie=$_POST['type'];
-    include ('./'.$typeCategorie.'.php');
+    include ('../includes/php/'.$typeCategorie.'.php');
      ?>
   </div>
 </body>

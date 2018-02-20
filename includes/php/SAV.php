@@ -11,5 +11,5 @@
   </div>
 </div>
 <?php
-include 'partiePopupCommune.php';
+include './sub_popup.php';
  ?>
