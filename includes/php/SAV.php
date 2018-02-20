@@ -11,5 +11,5 @@
   </div>
 </div>
 <?php
-include './sub_popup.php';
+include 'sub_popup.php';
  ?>
