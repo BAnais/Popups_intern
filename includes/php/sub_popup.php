@@ -56,6 +56,8 @@
       <div class="col-sm-4">
         <input type="date" name="dateLivraison">
       </div>
+    </div>
+    <div class="row">
       <div class="col-sm-2">
         <label>Horaire:</label>
       </div>
