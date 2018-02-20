@@ -12,7 +12,7 @@ include ('../includes/html/sub_popup_Exp_Ret.html');
       <label for="ConfigureNo">Non</label>
     </div>
   </div>
-<div class="row">
+<div class="row" id="pMatos">
   <div class="col-sm-3">
     <label>Prix Matériel : </label>
   </div>
