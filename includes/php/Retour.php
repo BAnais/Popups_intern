@@ -3,7 +3,7 @@ include ('../includes/html/sub_popup_Exp_Ret.html');
  ?>
 
 <div class="row">
-  <div class="col-lg-4">
+  <div class="col-lg-2">
     <label>Matériel Connu : </label>
   </div>
   <div class="col-lg-8">
@@ -14,7 +14,7 @@ include ('../includes/html/sub_popup_Exp_Ret.html');
   </div>
 </div>
 <div class="row">
-  <div class="col-lg-4">
+  <div class="col-lg-2">
     <label>Numéro de série : </label>
   </div>
   <div class="col-lg-8">
