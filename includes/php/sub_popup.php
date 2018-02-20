@@ -53,10 +53,10 @@
       <div class="col-sm-3">
         <label>Date livraison</label>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-2">
         <input type="date" name="dateLivraison">
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-2">
         <label>Horaire (24h format)</label>
       </div>
       <div class="col-sm-3">
