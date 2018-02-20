@@ -8,20 +8,24 @@ document.addEventListener("DOMContentLoaded", function(event){
 $(document).ready(function(){
   console.log("Document chargé");
 
-  //sub_popup_Exp_Ret
-  document.getElementById('nbColisRow').style.display="none";
-  document.getElementById('numDevisRow').style.display="none";
+
   //sub_popup
   document.getElementById('transporteurConditionYesRow').style.display="none";
   switch (document.title) {
     case "Expedition":
     // expedition.php
     document.getElementById('pMatos').style.display = "none";
+    //sub_popup_Exp_Ret
+    document.getElementById('nbColisRow').style.display="none";
+    document.getElementById('numDevisRow').style.display="none";
     break;
 
     case "Retour":
     //Retour
     document.getElementById('numSerieRow').style.display="none";
+    //sub_popup_Exp_Ret
+    document.getElementById('nbColisRow').style.display="none";
+    document.getElementById('numDevisRow').style.display="none";
     break;
 
     case "SAV":
