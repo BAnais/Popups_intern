@@ -13,7 +13,7 @@ include ('../includes/html/sub_popup_Exp_Ret.html');
     <label for="ConnuNo">No</label>
   </div>
 </div>
-<div class="row">
+<div class="row" id="numSerieRow">
   <div class="col-lg-2">
     <label>Numéro de série : </label>
   </div>
