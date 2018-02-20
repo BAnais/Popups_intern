@@ -51,7 +51,6 @@ if($('#EnvGroupYes').prop('checked')){
 $('#nbColisRow').css('display',"none");
 }
 
-
-
+});
 
 });
