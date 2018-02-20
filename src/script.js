@@ -6,11 +6,20 @@ function openPopup(){
 */
 //doc pret
 $(document).ready(function(){
+  console.log("Document chargé");
 
-  //Dynamique expedition.php
+  // expedition.php
   document.getElementById('pMatos').style.display = "none";
-console.log("Document chargé");
-
+  //sub_popup_Exp_Ret
+  document.getElementById('nbColisRow').style.display="none";
+  document.getElementById('numDevisRow').style.display="none";
+  //sub_popup
+  document.getElementById('transporteurConditionYesRow').style.display="none";
+  //sav
+  document.getElementById('savExpYesRow').style.display="none";
+  //Retour
+  document.getElementById('numSerieRow').style.display="none";
+  
 });
 
 
