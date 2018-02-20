@@ -10,7 +10,7 @@
       </div>
     </div>
 
-    <div class="row" id="transporteurConditionYes">
+    <div class="row" id="transporteurConditionYesRow">
       <div class="col-sm-3">
         <label>Bon T1 : </label>
       </div>
