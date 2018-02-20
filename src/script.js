@@ -9,7 +9,7 @@ $(document).ready(function(){
 
   //Dynamique expedition.php
   document.getElementById('pMatos').style.visibility = "hidden";
-
+console.log("Document chargé");
 
 });
 
