@@ -1,5 +1,5 @@
 <?php
-include '../html/sub_popup_Exp_Ret.html';
+include ('../html/sub_popup_Exp_Ret.html');
  ?>
 <div class="row">
     <div class="col-lg-4">
@@ -21,6 +21,6 @@ include '../html/sub_popup_Exp_Ret.html';
   </div>
 </div>
 <?php
-include './sub_popup.php';
+include ('./sub_popup.php');
 
  ?>
