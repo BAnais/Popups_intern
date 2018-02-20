@@ -21,6 +21,6 @@ include ('../html/sub_popup_Exp_Ret.html');
   </div>
 </div>
 <?php
-include ('./sub_popup.php');
+include ('sub_popup.php');
 
  ?>
