@@ -27,7 +27,7 @@
         <label>N° Suivi</label>
       </div>
       <div class="col-sm-6">
-        <input type="text" name="numSuivi" placeholder="133356769">
+        <input type="text" name="numSuivi" placeholder="123456769">
       </div>
     </div>
 
