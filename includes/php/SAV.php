@@ -4,9 +4,9 @@
     <label>Expédition : </label>
   </div>
   <div class="col-lg-8">
-    <input type="radio" name="expedition" value="oui" id="expYes">
+    <input type="radio" name="expedition" value="oui" id="expYes" data-display="block">
     <label for="expYes">Oui</label>
-    <input type="radio" name="expedition" value="non" id="expNo">
+    <input type="radio" name="expedition" value="non" id="expNo" data-display="none">
     <label for="expNo">Non</label>
   </div>
 </div>
