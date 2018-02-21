@@ -45,8 +45,8 @@ $(document).ready(function(){
 })*/
 $('input[type="radio"]').on('click',function(){
 
-$('#'+$('input[type="radio"].prop("checked")').data('divId')).css('display',$('input[type="radio"].prop("checked")').data('display'));
-console.log($(this).data('divId'));
+$($(this).attr('data-divId')).css('display',$(this).data('display'));
+console.log($($('input[type="radio"].prop("checked")').attr('data-divId')));
 /*
 if($('#EnvGroupYes').prop('checked')){
 	$('#nbColisRow').css('display',"block");
