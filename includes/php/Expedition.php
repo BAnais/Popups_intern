@@ -6,9 +6,9 @@ include ('../includes/html/sub_popup_Exp_Ret.html');
       <label>Configuré : </label>
     </div>
     <div class="col-sm-6">
-      <input type="radio" name="Configuration" value="Yes" id="ConfigureYes" data-display="block">
+      <input type="radio" name="Configuration" value="Yes" id="ConfigureYes" data-display="block" data-divId="pMatos">
       <label for="ConfigureYes">Oui</label>
-      <input type="radio" name="Configuration" value="No" id="ConfigureNo" data-display="none">
+      <input type="radio" name="Configuration" value="No" id="ConfigureNo" data-display="none"  data-divId="pMatos">
       <label for="ConfigureNo">Non</label>
     </div>
   </div>
