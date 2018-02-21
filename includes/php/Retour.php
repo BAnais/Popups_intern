@@ -7,7 +7,7 @@ include ('../includes/html/sub_popup_Exp_Ret.html');
     <label>Matériel Connu:</label>
   </div>
   <div class="col-sm-6">
-    <input type="radio" name="Connu" value="Yes" id="ConnuYes" data-display="block" data-divId="numSerieRow">
+    <input type="radio" name="Connu" value="Yes" id="ConnuYes" data-display="inline-block" data-divId="numSerieRow">
     <label for="ConnuYes">Oui</label>
     <input type="radio" name="Connu" id="ConnuNo" data-display="none" data-divId="numSerieRow">
     <label for="ConnuNo">No</label>
