@@ -24,7 +24,7 @@
           <label>Déploiement : </label>
         </div>
         <div class="col-sm-6">
-          <input type="radio" name="deploiement" value="Yes" id="deploiementYes" data-display="block" data-divId="numDevisRow">
+          <input type="radio" name="deploiement" value="Yes" id="deploiementYes" data-display="block" data-divId="numDevisRow" data-divname="contentNumDevis">
           <label for="deploiementYes">Oui</label>
           <input type="radio" name="deploiement" value="No" id="deploiementNo" data-display="none" data-divId="numDevisRow">
           <label for="deploiementNo">Non</label>
@@ -32,10 +32,10 @@
     </div>
 
     <div class="row" id="numDevisRow">
-      <div class="col-sm-3">
+      <div class="col-sm-3" name="contentNumDevis">
         <label>N° Devis : </label>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-6" name="contentNumDevis">
         <input type="text" name="numeroDevis" placeholder="affichage bdd">
       </div>
     </div>
