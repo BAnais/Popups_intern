@@ -5,7 +5,7 @@
       <div class="col-sm-6">
         <input  type="radio" name="transporteur" value="Transporteur1" id="transporteurChoice1" data-display="inline-block" data-divId="transporteurConditionYesRow" data-divname="contentTrCondYes">
         <label for="transporteurChoice1">Transporteur1</label>
-        <input type="radio" name="transporteur" value="Transporteur3" id="transporteurChoice3" data-display="none" data-divId="transporteurConditionYesRow">
+        <input type="radio" name="transporteur" value="Transporteur3" id="transporteurChoice3" data-display="none">
         <label for="transporteurChoice3">Transporteur3</label>
       </div>
     </div>
@@ -15,9 +15,9 @@
         <label>Bon T1 : </label>
       </div>
       <div class="col-sm-6"  name="contentTrCondYes">
-        <input type="radio" name="bonT1" value="Oui" id="bonT1Choice1">
+        <input type="radio" name="contentTrCondYes" value="Oui" id="bonT1Choice1">
         <label for="bonUPSChoice1">Oui</label>
-        <input type="radio" name="bonT3" value="Non" id="bonT3Choice3">
+        <input type="radio" name="contentTrCondYes" value="Non" id="bonT3Choice3">
         <label for="bonUPSChoice3">Non</label>
       </div>
     </div>

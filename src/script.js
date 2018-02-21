@@ -49,8 +49,8 @@ $('input[type="radio"]').on('click',function(){
 $('#'+$(this).attr('data-divId')).css('display',$(this).data('display'));
 //récupère le name des divs correspondantes dans data
 $('[name='+$(this).data('divname')+']').css('display','inline-'+$(this).data('display'));
-//console.log($(this).attr('data-divId'));
-//console.log($(this).data('divname'));
+console.log($(this).attr('data-divId'));
+console.log($(this).data('divname'));
 
 /*
 if($('#EnvGroupYes').prop('checked')){

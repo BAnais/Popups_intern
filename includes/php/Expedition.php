@@ -8,7 +8,7 @@ include ('../includes/html/sub_popup_Exp_Ret.html');
     <div class="col-sm-6">
         <input type="radio" name="Configuration" value="Yes" id="ConfigureYes" data-display="block" data-divId="pMatos" data-divname="contentpMatos">
       <label for="ConfigureYes">Oui</label>
-      <input type="radio" name="Configuration" value="No" id="ConfigureNo" data-display="none"  data-divId="pMatos" data-divname="contentpMatos">
+      <input type="radio" name="Configuration" value="No" id="ConfigureNo" data-display="none"  data-divId="pMatos">
       <label for="ConfigureNo">Non</label>
     </div>
   </div>
