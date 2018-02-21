@@ -46,6 +46,7 @@ $(document).ready(function(){
 $('input[type="radio"]').on('click',function(){
 
 $($('input[type="radio"].prop("checked")').data('divId')).css('display',$('input[type="radio"].prop("checked")').data('display'));
+console.log("changement please");
 /*
 if($('#EnvGroupYes').prop('checked')){
 	$('#nbColisRow').css('display',"block");
