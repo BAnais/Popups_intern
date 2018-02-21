@@ -49,8 +49,14 @@ $('input[type="radio"]').on('click',function(){
 $('#'+$(this).attr('data-divId')).css('display',$(this).data('display'));
 //récupère le name des divs correspondantes dans data
 $('[name='+$(this).data('divname')+']').css('display','inline-'+$(this).data('display'));
+
+//si le radio checked est transporteur3 alors on uncheck le bonUPS
+if($("#transporteurChoice3").prop("checked")){
+  $('[name="contentTrCondYes"]').prop('checked', false);
+}
 console.log($(this).attr('data-divId'));
 console.log($(this).data('divname'));
+console.log();
 
 /*
 if($('#EnvGroupYes').prop('checked')){
