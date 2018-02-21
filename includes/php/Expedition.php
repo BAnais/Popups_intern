@@ -16,8 +16,8 @@ include ('../includes/html/sub_popup_Exp_Ret.html');
   <div class="col-sm-3" name="contentpMatos">
     <label>Prix Matériel : </label>
   </div>
-  <div class="col-sm-6">
-    <input type="text" name="contentpMatos" placeholder=" affichage bdd">
+  <div class="col-sm-6" name="contentpMatos">
+    <input type="text"  placeholder=" affichage bdd">
   </div>
 </div>
 <?php

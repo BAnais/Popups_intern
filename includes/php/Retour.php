@@ -7,9 +7,9 @@ include ('../includes/html/sub_popup_Exp_Ret.html');
     <label>Matériel Connu:</label>
   </div>
   <div class="col-sm-6">
-    <input type="radio" name="Connu" value="Yes" id="ConnuYes" data-display="inline-block" data-divId="numSerieRow">
+    <input type="radio" name="Connu" value="Yes" id="ConnuYes" data-display="inline-block" data-divId="numSerieRow" data-divname="contentNumSerie">
     <label for="ConnuYes">Oui</label>
-    <input type="radio" name="Connu" id="ConnuNo" data-display="none" data-divId="numSerieRow">
+    <input type="radio" name="Connu" id="ConnuNo" data-display="none" data-divId="numSerieRow" data-divname="contentNumSerie">
     <label for="ConnuNo">No</label>
   </div>
 </div>
@@ -17,7 +17,7 @@ include ('../includes/html/sub_popup_Exp_Ret.html');
   <div class="col-sm-3">
     <label>Numéro de série : </label>
   </div>
-  <div class="col-sm-6">
+  <div class="col-sm-6" name="contentNumSerie">
     <input type="text" name="numSerie" placeholder="affichage bdd"> <!-- si inconnu dans bdd alors afficher "inconnu"-->
   </div>
 </div>
