@@ -45,8 +45,8 @@ $(document).ready(function(){
 })*/
 $('input[type="radio"]').on('click',function(){
 
-$($(this).attr('data-divId')).css('display',$(this).data('display'));
-console.log($($('input[type="radio"].prop("checked")').attr('data-divId')));
+$('#'+$(this).attr('data-divId')).css('display',$(this).data('display'));
+console.log($(this).attr('data-divId'));
 /*
 if($('#EnvGroupYes').prop('checked')){
 	$('#nbColisRow').css('display',"block");
