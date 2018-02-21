@@ -45,7 +45,7 @@ $(document).ready(function(){
 })*/
 $('input[type="radio"]').on('click',function(){
 
-$('#'+$('input[type="radio"]:checked').data('divId')).css('display',$('input[type="radio"]:checked').data('display'));
+$('#'+$('input[type="radio"].prop("checked")').data('divId')).css('display',$('input[type="radio"].prop("checked")').data('display'));
 console.log($('input[type="radio"].prop("checked")').data('divId'));
 /*
 if($('#EnvGroupYes').prop('checked')){
