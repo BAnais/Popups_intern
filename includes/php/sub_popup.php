@@ -3,9 +3,9 @@
         <label>Transporteur : </label>
       </div>
       <div class="col-sm-6">
-        <input  type="radio" name="transporteur" value="Transporteur1" id="transporteurChoice1">
+        <input  type="radio" name="transporteur" value="Transporteur1" id="transporteurChoice1" data-display="block">
         <label for="transporteurChoice1">Transporteur1</label>
-        <input type="radio" name="transporteur" value="Transporteur3" id="transporteurChoice3">
+        <input type="radio" name="transporteur" value="Transporteur3" id="transporteurChoice3" data-display="none">
         <label for="transporteurChoice3">Transporteur3</label>
       </div>
     </div>
