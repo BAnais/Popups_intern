@@ -53,21 +53,40 @@
         <label>Horaire :</label>
       </div>
       <div class="col-sm-6 contentRow">
-        <select name="heure">
+        <label>De :</label>
+        <select name="Dheure">
           <option value="h">heure</option>
-          <?php for ($heure = 00 ; $heure <= 24 ; $heure++):
-            $hour = sprintf("%02d", $heure);
+          <?php for ($Dheure = 00 ; $Dheure <= 24 ; $Dheure++):
+            $Dhour = sprintf("%02d", $Dheure);
             ?>
-            <option value="<?php echo $hour ?>"><?=$hour;?></option>
+            <option value="<?php echo $Dhour ?>"><?=$Dhour;?></option>
           <?php endfor; ?>
         </select>
 
-        <select name="minutes">
+        <select name="Dminutes">
           <option value="min">minutes</option>
-          <?php for ($minutes = 00 ; $minutes <= 59 ; $minutes++):
-            $min = sprintf("%02d", $minutes);
+          <?php for ($Dminutes = 00 ; $Dminutes <= 59 ; $Dminutes++):
+            $Dmin = sprintf("%02d", $Dminutes);
             ?>
-            <option value="<?=$min ?>"><?=$min;?></option>
+            <option value="<?=$Dmin ?>"><?=$Dmin;?></option>
+          <?php endfor; ?>
+        </select>
+
+        <select name="Fheure">
+          <option value="h">heure</option>
+          <?php for ($Fheure = 00 ; $Fheure <= 24 ; $Fheure++):
+            $Fhour = sprintf("%02d", $heure);
+            ?>
+            <option value="<?php echo $Fhour ?>"><?=$Fhour;?></option>
+          <?php endfor; ?>
+        </select>
+
+        <select name="Fminutes">
+          <option value="min">minutes</option>
+          <?php for ($Fminutes = 00 ; $Fminutes <= 59 ; $Fminutes++):
+            $Fmin = sprintf("%02d", $Fminutes);
+            ?>
+            <option value="<?=$Fmin ?>"><?=$Fmin;?></option>
           <?php endfor; ?>
         </select>
       </div>
