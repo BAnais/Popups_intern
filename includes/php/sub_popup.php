@@ -53,7 +53,7 @@
         <label>Horaire :</label>
       </div>
       <div class="col-sm-6 contentRow">
-        <label>De :</label>
+        <label>Entre :</label>
         <select name="Dheure">
           <option value="h">heure</option>
           <?php for ($Dheure = 00 ; $Dheure <= 24 ; $Dheure++):
@@ -71,7 +71,7 @@
             <option value="<?=$Dmin ?>"><?=$Dmin;?></option>
           <?php endfor; ?>
         </select>
-
+<label> Et : </label>
         <select name="Fheure">
           <option value="h">heure</option>
           <?php for ($Fheure = 00 ; $Fheure <= 24 ; $Fheure++):
