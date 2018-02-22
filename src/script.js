@@ -38,11 +38,7 @@ $(document).ready(function(){
   }
 });
 
-//on select Exp ou Ret
-//affichage nb colis si groupe = Yes
-/*$('input[type="radio"]').on('click',function(){
-	console.log(document.getElementById('EnvGroupYes').checked)
-})*/
+//detecte un clic bouton radio et réagis dynamiquement en fonction de ce dernier
 $('input[type="radio"]').on('click',function(){
 //récupère l'id de la div row correspondante dans data-divId puis change le style display
 //selon l'instruction displaydivrow
@@ -50,9 +46,8 @@ $('#'+$(this).attr('data-divId')).css('display',$(this).data('display'));
 //si data('display')="block" alors on passe divname concernées required à true
 //sinon si = none alors on passe required à false
 if($(this).data('display') == "block"){
-  
+console.log("si display = block on va te mettre en required");
 }
-
 //récupère le name des divs correspondantes dans data
 $('[name='+$(this).data('divname')+']').css('display','inline-'+$(this).data('display'));
 
@@ -60,17 +55,20 @@ $('[name='+$(this).data('divname')+']').css('display','inline-'+$(this).data('di
 if($("#transporteurChoice3").prop("checked")){
   $('[name="contentTrCondYes"]').prop('checked', false);
 }
+//popupTemplate changement de la valeur du bouton en fct de la langue selectionné
+var btnFR = "Envoyer";
+var btnEN = "Send";
+//if()
+
+//test console log
 console.log($(this).attr('data-divId'));
 console.log($(this).data('divname'));
 console.log($(this).data('display'));
+console.log($(this));
 
-/*
-if($('#EnvGroupYes').prop('checked')){
-	$('#nbColisRow').css('display',"block");
-}else if ($('#EnvGroupNo').prop('checked')){
-$('#nbColisRow').css('display',"none");
-}*/
 
 });
+
+
 
 });
