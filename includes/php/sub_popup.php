@@ -87,7 +87,7 @@
         <label>Raison d'envoi</label>
       </div>
       <div class="col-sm-6">
-        <textarea name="raisonEnvoi" rows="5" cols="60" readonly="false" placeholder="Entrez la raison de l'envoi ici" ></textarea>
+        <textarea name="raisonEnvoi" rows="5" cols="30" readonly="false" placeholder="Entrez la raison de l'envoi ici" ></textarea>
       </div>
     </div>
 
@@ -96,9 +96,9 @@
         <label>Langue</label>
       </div>
       <div class="col-sm-6">
-        <input type="radio" name="FR" value="FR" id="FR1">
+        <input type="radio" name="langue" value="FR" id="FR1">
         <label for="FR1">FR</label>
-        <input type="radio" name="EN" value="EN" id="EN1">
+        <input type="radio"  name="langue" value="EN" id="EN1">
         <label for="EN1">EN</label>
       </div>
     </div>
