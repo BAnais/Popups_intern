@@ -5,15 +5,15 @@ $typeCategorie=$_POST['type'];
 <html>
 <head>
   <meta charset="utf-8">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script src="../src/script.js" charset="utf-8"></script>
   <link rel="stylesheet" href="../src/style.css" />
   <title><?php echo $typeCategorie ;?></title>
 </head>
 <body>
-  <div class="container-fluid">
-    <form class="form-group" action="index.html" method="post">
+  <div class="container">
+    <form  action="index.html" method="post">
 
       <?php
 
