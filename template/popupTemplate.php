@@ -12,10 +12,18 @@
 </head>
 <body>
   <div class="container">
+    <form class="" action="index.html" method="post">
+
     <?php
 
     include ('../includes/php/'.$typeCategorie.'.php');
      ?>
+     <div class="row">
+       <div class="col-sm-2 col-sm-offset-5">
+         <button type="button" name="btnSend">Ok</button>
+       </div>
+     </div>
+   </form>
   </div>
 </body>
 </html>
