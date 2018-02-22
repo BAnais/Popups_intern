@@ -1,7 +1,12 @@
 .row{
   display: block;
+  margin-left: 5%;
 }
 
 .contentRow{
   display: inline-block;
+}
+
+.btn-primary{
+justify-content: center;
 }
