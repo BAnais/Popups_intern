@@ -1,49 +1,54 @@
-    <div class="row" id="envGroupRow">
-      <div class="col-sm-3 contentRow">
-        <label>Envoi Groupé : </label>
-      </div>
-      <div class="col-sm-6 contentRow">
-      <input type="radio" name="groupe" value="yes" id="EnvGroupYes" data-display="block" data-divId="nbColisRow" data-divname="contentEnvGroup">
-      <label for="EnvGroupYes">Oui</label>
-      <input type="radio" name="groupe" value="no" id="EnvGroupNo" data-display="none" data-divId="nbColisRow">
-      <label for="EnvGroupNo">Non</label>
-      </div>
+<div class="row" id="envGroupRow">
+  <div class="col-sm-3 contentRow">
+    <label>Envoi Groupé : </label>
+  </div>
+  <div class="col-sm-6 contentRow">
+    <input type="radio" name="groupe" value="yes" id="EnvGroupYes" data-display="block" data-divId="nbColisRow" data-divname="contentEnvGroup">
+    <label for="EnvGroupYes">Oui</label>
+    <input type="radio" name="groupe" value="no" id="EnvGroupNo" data-display="none" data-divId="nbColisRow">
+    <label for="EnvGroupNo">Non</label>
+  </div>
+</div>
+
+<div id="nbColisRow">
+  <div class="row" >
+    <div class="col-sm-3" name="contentEnvGroup">
+      <label>Nombre de colis :</label>
     </div>
-
-    <div class="row" id="nbColisRow">
-      <div class="col-sm-3" name="contentEnvGroup">
-        <label>Nombre de colis :</label>
-      </div>
-      <div class="col-sm-6" name="contentEnvGroup">
-        <input type="number" name="nbColis" placeholder="XXX" min="2" max="10">
-      </div>
-
-        <div class="col-sm-3 contentRow" name="contentEnvGroup">
-          <label>Prix Transporteur</label>
-        </div>
-        <div class="col-sm-6 contentRow" name="contentEnvGroup">
-          <input type="text" name="prixTransporteur" placeholder="XXX €">
-        </div>
-
+    <div class="col-sm-6" name="contentEnvGroup">
+      <input type="number" name="nbColis" placeholder="XXX" min="2" max="10">
     </div>
+  </div>
 
-    <div class="row">
-        <div class="col-sm-3 contentRow">
-          <label>Déploiement : </label>
-        </div>
-        <div class="col-sm-6 contentRow">
-          <input type="radio" name="deploiement" value="Yes" id="deploiementYes" data-display="block" data-divId="numDevisRow" data-divname="contentNumDevis">
-          <label for="deploiementYes">Oui</label>
-          <input type="radio" name="deploiement" value="No" id="deploiementNo" data-display="none" data-divId="numDevisRow">
-          <label for="deploiementNo">Non</label>
-        </div>
+  <div class="row">
+    <div class="col-sm-3 contentRow" name="contentEnvGroup">
+      <label>Prix Transporteur</label>
     </div>
+    <div class="col-sm-6 contentRow" name="contentEnvGroup">
+      <input type="text" name="prixTransporteur" placeholder="XXX €">
+    </div>
+  </div>
+  
+</div>
 
-    <div class="row" id="numDevisRow">
-      <div class="col-sm-3" name="contentNumDevis">
-        <label>N° Devis : </label>
-      </div>
-      <div class="col-sm-6" name="contentNumDevis">
-        <input type="text" name="numeroDevis" placeholder="affichage bdd">
-      </div>
-    </div>
+
+<div class="row">
+  <div class="col-sm-3 contentRow">
+    <label>Déploiement : </label>
+  </div>
+  <div class="col-sm-6 contentRow">
+    <input type="radio" name="deploiement" value="Yes" id="deploiementYes" data-display="block" data-divId="numDevisRow" data-divname="contentNumDevis">
+    <label for="deploiementYes">Oui</label>
+    <input type="radio" name="deploiement" value="No" id="deploiementNo" data-display="none" data-divId="numDevisRow">
+    <label for="deploiementNo">Non</label>
+  </div>
+</div>
+
+<div class="row" id="numDevisRow">
+  <div class="col-sm-3" name="contentNumDevis">
+    <label>N° Devis : </label>
+  </div>
+  <div class="col-sm-6" name="contentNumDevis">
+    <input type="text" name="numeroDevis" placeholder="affichage bdd">
+  </div>
+</div>
