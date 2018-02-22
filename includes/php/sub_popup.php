@@ -33,15 +33,6 @@
 
     <div class="row">
       <div class="col-sm-3 contentRow">
-        <label>Prix Transporteur</label>
-      </div>
-      <div class="col-sm-6 contentRow">
-        <input type="text" name="prixTransporteur" placeholder="XXX €">
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-3 contentRow">
         <label>Date d'envoi</label>
       </div>
       <div class="col-sm-6 contentRow">
