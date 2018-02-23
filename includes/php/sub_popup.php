@@ -56,7 +56,7 @@
         <label>Entre :</label>
         <select name="Dheure">
           <option value="h">heure</option>
-          <?php for ($Dheure = 00 ; $Dheure <= 24 ; $Dheure++):
+          <?php for ($Dheure = 00 ; $Dheure <= 23 ; $Dheure++):
             $Dhour = sprintf("%02d", $Dheure);
             ?>
             <option value="<?php echo $Dhour ?>"><?=$Dhour;?></option>
@@ -74,8 +74,8 @@
 <label> Et : </label>
         <select name="Fheure">
           <option value="h">heure</option>
-          <?php for ($Fheure = 00 ; $Fheure <= 24 ; $Fheure++):
-            $Fhour = sprintf("%02d", $heure);
+          <?php for ($Fheure = 00 ; $Fheure <= 23 ; $Fheure++):
+            $Fhour = sprintf("%02d", $Fheure);
             ?>
             <option value="<?php echo $Fhour ?>"><?=$Fhour;?></option>
           <?php endfor; ?>

@@ -9,28 +9,28 @@ $(document).ready(function(){
   console.log("Document chargé");
 
   //sub_popup
-  document.getElementById('transporteurConditionYesRow').style.display="none";
+  $('#transporteurConditionYesRow').css('display','none');
 
   switch (document.title) {
     case "Expedition":
     // expedition.php
-    document.getElementById('pMatos').style.display = "none";
+    $('#pMatos').css('display','none');
     //sub_popup_Exp_Ret
-    document.getElementById('nbColisRow').style.display="none";
-    document.getElementById('numDevisRow').style.display="none";
+    $('#nbColisRow').css('display','none');
+    $('#numDevisRow').css('display','none');
     break;
 
     case "Retour":
     //Retour
-    document.getElementById('numSerieRow').style.display="none";
+    $('#numSerieRow').css('display','none');
     //sub_popup_Exp_Ret
-    document.getElementById('nbColisRow').style.display="none";
-    document.getElementById('numDevisRow').style.display="none";
+    $('#nbColisRow').css('display','none');
+    $('#numDevisRow').css('display','none');
     break;
 
     case "SAV":
     //sav
-    document.getElementById('savExpYesRow').style.display="none";
+    $('#savExpYesRow').css('display','none');
     break;
 
     default:
