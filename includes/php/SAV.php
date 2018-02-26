@@ -5,9 +5,9 @@
   </div>
   <div class="col-lg-8 contentRow">
     <input type="radio" name="expedition" value="oui" id="expYes" data-display="block" data-divId="savExpYesRow">
-    <label for="expYes">Oui</label>
+    <label for="expYes"required>Oui</label>
     <input type="radio" name="expedition" value="non" id="expNo" data-display="none" data-divId="savExpYesRow">
-    <label for="expNo">Non</label>
+    <label for="expNo" vrequired>Non</label>
   </div>
 </div>
 <div class="subpopup" id="savExpYesRow">

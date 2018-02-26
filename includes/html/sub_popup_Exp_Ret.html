@@ -3,9 +3,9 @@
     <label>Envoi Groupé : </label>
   </div>
   <div class="col-sm-6 contentRow">
-    <input type="radio" name="groupe" value="yes" id="EnvGroupYes" data-display="block" data-divId="nbColisRow" data-divname="contentEnvGroup">
+    <input type="radio" name="groupe" value="yes" id="EnvGroupYes" data-display="block" data-divId="nbColisRow" data-divname="contentEnvGroup" required>
     <label for="EnvGroupYes">Oui</label>
-    <input type="radio" name="groupe" value="no" id="EnvGroupNo" data-display="none" data-divId="nbColisRow" data-divname="contentEnvGroup">
+    <input type="radio" name="groupe" value="no" id="EnvGroupNo" data-display="none" data-divId="nbColisRow" data-divname="contentEnvGroup" required>
     <label for="EnvGroupNo">Non</label>
   </div>
 </div>
@@ -25,7 +25,7 @@
       <label>Prix Transporteur</label>
     </div>
     <div class="col-sm-6 contentRow" >
-      <input type="text" name="contentEnvGroup" placeholder="XXX €">
+      <input type="number" name="contentEnvGroup" placeholder="XXX €">
     </div>
   </div>
 
@@ -38,9 +38,9 @@
   </div>
   <div class="col-sm-6 contentRow">
     <input type="radio" name="deploiement" value="Yes" id="deploiementYes" data-display="block" data-divId="numDevisRow" data-divname="contentNumDevis">
-    <label for="deploiementYes">Oui</label>
+    <label for="deploiementYes" required>Oui</label>
     <input type="radio" name="deploiement" value="No" id="deploiementNo" data-display="none" data-divId="numDevisRow" data-divname="contentNumDevis">
-    <label for="deploiementNo">Non</label>
+    <label for="deploiementNo" required>Non</label>
   </div>
 </div>
 
