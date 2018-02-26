@@ -5,20 +5,20 @@
       <div class="col-sm-6 contentRow">
         <input  type="radio" name="transporteur" value="Transporteur1" id="transporteurChoice1" data-display="block" data-divId="transporteurConditionYesRow" data-divname="contentTrCondYes">
         <label for="transporteurChoice1">Transporteur1</label>
-        <input type="radio" name="transporteur" value="Transporteur3" id="transporteurChoice3"data-display="none" data-divId="transporteurConditionYesRow" >
+        <input type="radio" name="transporteur" value="Transporteur3" id="transporteurChoice3"data-display="block" data-divId="transporteurConditionYesRow"  data-divname="contentTrCondYes" >
         <label for="transporteurChoice3">Transporteur3</label>
       </div>
     </div>
 
     <div class="row" id="transporteurConditionYesRow">
       <div class="col-sm-3" name="contentTrCondYes">
-        <label>Bon T1 : </label>
+        <label>Bon Transporteur : </label>
       </div>
       <div class="col-sm-6"  name="contentTrCondYes">
-        <input type="radio" name="contentTrCondYes" value="Oui" id="bonT1Choice1">
-        <label for="bonUPSChoice1">Oui</label>
-        <input type="radio" name="contentTrCondYes" value="Non" id="bonT3Choice3">
-        <label for="bonUPSChoice3">Non</label>
+        <input type="radio" name="contentTrCondYes" value="Oui" id="bonOui">
+        <label for="bonChoice1">Oui</label>
+        <input type="radio" name="contentTrCondYes" value="Non" id="bonNon">
+        <label for="bonChoice2">Non</label>
       </div>
     </div>
 

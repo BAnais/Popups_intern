@@ -11,6 +11,7 @@ $typeCategorie=$_POST['type'];
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="../src/script.js" charset="utf-8"></script>
   <link rel="stylesheet" href="../src/style.css" />
+    <title><?php echo $typeCategorie ;?></title>
   <style>
   .modal-header, h4, .close {
       background-color: #5cb85c;
@@ -26,7 +27,7 @@ $typeCategorie=$_POST['type'];
 <body>
 
 <div class="container">
-  <h2 id="titleCategorie"><?php echo $typeCategorie ;?></h2>
+  <h2 ><?php echo $typeCategorie ;?></h2>
   <!-- Trigger the modal with a button -->
   <button type="button" class="btn btn-default btn-lg" id="myBtn">Open</button>
 
@@ -38,7 +39,7 @@ $typeCategorie=$_POST['type'];
       <div class="modal-content">
         <div class="modal-header" >
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> <?php echo $typeCategorie ;?></h4>
+          <h4 id="titleCategorie"> <?php echo $typeCategorie ;?></h4>
         </div>
         <div class="modal-body" >
           <form class="form-horizontal" action="/Popups_intern/index.html" method="post">
