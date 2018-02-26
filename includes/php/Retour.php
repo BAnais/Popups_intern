@@ -14,10 +14,10 @@ include ('../includes/html/sub_popup_Exp_Ret.html');
   </div>
 </div>
 <div class="row" id="numSerieRow">
-  <div class="col-sm-3" name="contentNumSerie">
+  <div class="col-sm-3">
     <label>Numéro de série : </label>
   </div>
-  <div class="col-sm-6" name="contentNumSerie">
+  <div class="col-sm-6" >
     <input type="text" name="numSerie" placeholder="affichage bdd"> <!-- si inconnu dans bdd alors afficher "inconnu"-->
   </div>
 </div>

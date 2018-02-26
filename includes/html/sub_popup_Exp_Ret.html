@@ -5,27 +5,27 @@
   <div class="col-sm-6 contentRow">
     <input type="radio" name="groupe" value="yes" id="EnvGroupYes" data-display="block" data-divId="nbColisRow" data-divname="contentEnvGroup">
     <label for="EnvGroupYes">Oui</label>
-    <input type="radio" name="groupe" value="no" id="EnvGroupNo" data-display="none" data-divId="nbColisRow">
+    <input type="radio" name="groupe" value="no" id="EnvGroupNo" data-display="none" data-divId="nbColisRow" data-divname="contentEnvGroup">
     <label for="EnvGroupNo">Non</label>
   </div>
 </div>
 
 <div id="nbColisRow">
   <div class="row" >
-    <div class="col-sm-3" name="contentEnvGroup">
+    <div class="col-sm-3" >
       <label>Nombre de colis :</label>
     </div>
-    <div class="col-sm-6" name="contentEnvGroup">
-      <input type="number" name="nbColis" placeholder="XXX" min="2" max="10">
+    <div class="col-sm-6" >
+      <input type="number" name="contentEnvGroup" placeholder="XXX" min="2" max="10">
     </div>
   </div>
 
   <div class="row">
-    <div class="col-sm-3 contentRow" name="contentEnvGroup">
+    <div class="col-sm-3 contentRow" >
       <label>Prix Transporteur</label>
     </div>
-    <div class="col-sm-6 contentRow" name="contentEnvGroup">
-      <input type="text" name="prixTransporteur" placeholder="XXX €">
+    <div class="col-sm-6 contentRow" >
+      <input type="text" name="contentEnvGroup" placeholder="XXX €">
     </div>
   </div>
 
@@ -39,16 +39,16 @@
   <div class="col-sm-6 contentRow">
     <input type="radio" name="deploiement" value="Yes" id="deploiementYes" data-display="block" data-divId="numDevisRow" data-divname="contentNumDevis">
     <label for="deploiementYes">Oui</label>
-    <input type="radio" name="deploiement" value="No" id="deploiementNo" data-display="none" data-divId="numDevisRow">
+    <input type="radio" name="deploiement" value="No" id="deploiementNo" data-display="none" data-divId="numDevisRow" data-divname="contentNumDevis">
     <label for="deploiementNo">Non</label>
   </div>
 </div>
 
 <div class="row" id="numDevisRow">
-  <div class="col-sm-3" name="contentNumDevis">
+  <div class="col-sm-3" >
     <label>N° Devis : </label>
   </div>
-  <div class="col-sm-6" name="contentNumDevis">
-    <input type="text" name="numeroDevis" placeholder="123456">
+  <div class="col-sm-6" >
+    <input type="text" name="contentNumDevis" placeholder="123456">
   </div>
 </div>

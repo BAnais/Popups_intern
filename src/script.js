@@ -53,7 +53,9 @@ $('input[type="radio"]').on('click',function(){
   //si data('display')="block" alors on passe divname concernées required à true
   //sinon si = none alors on passe required à false
   if($(this).data('display') == "block"){
-    console.log("si display = block on va te mettre en required");
+      $('[name='+$(this).data('divname')+']').attr('required','true');
+  }else if($(this).data('display') == "none"){
+    $('[name='+$(this).data('divname')+']').removeAttr('required');
   }
   //récupère le name des divs correspondantes dans data
 //  $('[name='+$(this).data('divname')+']').css('display','inline-'+$(this).data('display'));
