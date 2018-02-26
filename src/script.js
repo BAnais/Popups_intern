@@ -63,17 +63,26 @@ $('input[type="radio"]').on('click',function(){
   //si le radio checked est transporteur3 alors on uncheck le bonUPS
 /*  if($("#transporteurChoice3").prop("checked")){
     $('[name="contentTrCondYes"]').prop('checked', false);
-  }*/
+  }
+  */
+  //quand un click sur btn radio transporteur on récupère sa value pour l'ajouter
+  // au nom du bon (ligne suivante)
+  //if($('[name=transporteur]').prop("checked")){
+  if($(this).attr('name')=='transporteur' && $(this).prop("checked") ){
+  console.log('changement valeur label');
+  $('#bonTr').html("Bon "+$(this).attr('value')+ ":");
+}
+
   //popupTemplate changement de la valeur du bouton en fct de la langue selectionné
-  var btnFR = "Envoyer";
-  var btnEN = "Send";
-  //if()
+  if($(this).attr('name')=='langue' && $(this).prop("checked")){
+    $('[name=btnSend]').val($(this).data('btn'));
+  }
 
   //test console log
   console.log($(this).attr('data-divId'));
   console.log($(this).data('divname'));
   console.log($(this).data('display'));
-  console.log($(this));
+  console.log($(this).val());
 
 
 });

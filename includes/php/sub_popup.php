@@ -12,7 +12,7 @@
 
     <div class="row" id="transporteurConditionYesRow">
       <div class="col-sm-3" name="contentTrCondYes">
-        <label>Bon Transporteur : </label>
+        <label id="bonTr">Bon Transporteur : </label>
       </div>
       <div class="col-sm-6"  name="contentTrCondYes">
         <input type="radio" name="contentTrCondYes" value="Oui" id="bonOui">
@@ -106,9 +106,9 @@
         <label>Langue</label>
       </div>
       <div class="col-sm-6 contentRow">
-        <input type="radio" name="langue" value="FR" id="FR1">
+        <input type="radio" name="langue" value="FR" id="FR1" data-btn="Envoyer">
         <label for="FR1">FR</label>
-        <input type="radio"  name="langue" value="EN" id="EN1">
+        <input type="radio"  name="langue" value="EN" id="EN1" data-btn="Send">
         <label for="EN1">EN</label>
       </div>
     </div>

@@ -12,17 +12,6 @@ $typeCategorie=$_POST['type'];
   <script src="../src/script.js" charset="utf-8"></script>
   <link rel="stylesheet" href="../src/style.css" />
     <title><?php echo $typeCategorie ;?></title>
-  <style>
-  .modal-header, h4, .close {
-      background-color: #5cb85c;
-      color:white !important;
-      text-align: center;
-      font-size: 30px;
-  }
-  .modal-footer {
-      background-color: #f9f9f9;
-  }
-  </style>
 </head>
 <body>
 
@@ -46,6 +35,11 @@ $typeCategorie=$_POST['type'];
             <?php
             include ('../includes/php/'.$typeCategorie.'.php');
             ?>
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-5 ">
+                  <input class="btn-primary" type="submit" name="btnSend" value="Ok">
+              </div>
+            </div>
           </form>
         </div>
         <div class="modal-footer">
