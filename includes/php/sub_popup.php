@@ -5,16 +5,16 @@
       <div class="col-sm-6 contentRow">
         <input  type="radio" name="transporteur" value="Transporteur1" id="transporteurChoice1" data-display="block" data-divId="transporteurConditionYesRow" data-divname="contentTrCondYes">
         <label for="transporteurChoice1">Transporteur1</label>
-        <input type="radio" name="transporteur" value="Transporteur3" id="transporteurChoice3"data-display="block" data-divId="transporteurConditionYesRow"  data-divname="contentTrCondYes" >
+        <input type="radio" name="transporteur" value="Transporteur3" id="transporteurChoice3" data-display="block" data-divId="transporteurConditionYesRow"  data-divname="contentTrCondYes" >
         <label for="transporteurChoice3">Transporteur3</label>
       </div>
     </div>
 
     <div class="row" id="transporteurConditionYesRow">
-      <div class="col-sm-3" name="contentTrCondYes">
+      <div class="col-sm-3" >
         <label id="bonTr">Bon Transporteur : </label>
       </div>
-      <div class="col-sm-6"  name="contentTrCondYes">
+      <div class="col-sm-6" >
         <input type="radio" name="contentTrCondYes" value="Oui" id="bonOui">
         <label for="bonChoice1">Oui</label>
         <input type="radio" name="contentTrCondYes" value="Non" id="bonNon">
@@ -97,7 +97,7 @@
         <label>Raison d'envoi</label>
       </div>
       <div class="col-sm-6 contentRow">
-        <textarea name="raisonEnvoi" rows="5" cols="30" readonly="false" placeholder="Entrez la raison de l'envoi ici" ></textarea>
+        <textarea name="raisonEnvoi" rows="5" cols="30" editable="true" placeholder="Entrez la raison de l'envoi ici" ></textarea>
       </div>
     </div>
 

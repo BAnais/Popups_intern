@@ -11,11 +11,9 @@ $(document).ready(function(){
   $("#myBtn").on('click',function(){
     $("#myModal").modal();
   });
-
 });
 
 $('#myModal').on('show.bs.modal',function(){
-
   console.log($('#titleCategorie').text());
   //sub_popup
   $('#transporteurConditionYesRow').css('display','none');
@@ -58,22 +56,16 @@ $('input[type="radio"]').on('click',function(){
     console.log("si display = block on va te mettre en required");
   }
   //récupère le name des divs correspondantes dans data
-  $('[name='+$(this).data('divname')+']').css('display','inline-'+$(this).data('display'));
+//  $('[name='+$(this).data('divname')+']').css('display','inline-'+$(this).data('display'));
 
-  //si le radio checked est transporteur3 alors on uncheck le bonUPS
-/*  if($("#transporteurChoice3").prop("checked")){
-    $('[name="contentTrCondYes"]').prop('checked', false);
-  }
-  */
   //quand un click sur btn radio transporteur on récupère sa value pour l'ajouter
-  // au nom du bon (ligne suivante)
-  //if($('[name=transporteur]').prop("checked")){
+  // au nom du bon (ligne suivante) et uncheck les radio bonTr au clic du Tr
   if($(this).attr('name')=='transporteur' && $(this).prop("checked") ){
   console.log('changement valeur label');
   $('#bonTr').html("Bon "+$(this).attr('value')+ ":");
+  $('[name="contentTrCondYes"]').prop('checked', false);
 }
-
-  //popupTemplate changement de la valeur du bouton en fct de la langue selectionné
+  //popupTemplate changement de la valeur du bouton en fct de la langue selectionnée
   if($(this).attr('name')=='langue' && $(this).prop("checked")){
     $('[name=btnSend]').val($(this).data('btn'));
   }
