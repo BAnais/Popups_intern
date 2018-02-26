@@ -1,12 +1,6 @@
-.row{
-  display: block;
-  margin-left: 5%;
+.modal-header{
+  padding: 35px 50px;
 }
-
-.contentRow{
-  display: inline-block;
-}
-
-.btn-primary{
-justify-content: center;
+.modal-body{
+  padding: 40px 50px;
 }

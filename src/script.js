@@ -11,7 +11,7 @@ $(document).ready(function(){
   //sub_popup
   $('#transporteurConditionYesRow').css('display','none');
 
-  switch (document.title) {
+  switch ($('#titleCategorie')) {
     case "Expedition":
     // expedition.php
     $('#pMatos').css('display','none');
