@@ -43,7 +43,7 @@ $('#myModal').on('show.bs.modal',function(){
     default:
     break;
   }
-$('[type=date]').datepicker();
+  $('[type=date]').datepicker();
 });
 
 //detecte un clic bouton radio et réagis dynamiquement en fonction de ce dernier
@@ -64,19 +64,20 @@ $('input[type="radio"]').on('click',function(){
     if($('[name=contentEnvGroup]')){
       $('[name=NbColis]').removeAttr('required');
       $('[name=prixTransporteur]').removeAttr('required');
+    }else{
+      $('[name='+$(this).data('divname')+']').removeAttr('required');
     }
-    $('[name='+$(this).data('divname')+']').removeAttr('required');
   }
   //récupère le name des divs correspondantes dans data
-//  $('[name='+$(this).data('divname')+']').css('display','inline-'+$(this).data('display'));
+  //  $('[name='+$(this).data('divname')+']').css('display','inline-'+$(this).data('display'));
 
   //quand un click sur btn radio transporteur on récupère sa value pour l'ajouter
   // au nom du bon (ligne suivante) et uncheck les radio bonTr au clic du Tr
   if($(this).attr('name')=='transporteur' && $(this).prop("checked") ){
-  console.log('changement valeur label');
-  $('#bonTr').html("Bon "+$(this).attr('value')+ ":");
-  $('[name="contentTrCondYes"]').prop('checked', false);
-}
+    console.log('changement valeur label');
+    $('#bonTr').html("Bon "+$(this).attr('value')+ ":");
+    $('[name="contentTrCondYes"]').prop('checked', false);
+  }
   //popupTemplate changement de la valeur du bouton en fct de la langue selectionnée
   if($(this).attr('name')=='langue' && $(this).prop("checked")){
     $('[name=btnSend]').val($(this).data('btn'));
@@ -92,13 +93,13 @@ $('input[type="radio"]').on('click',function(){
 });
 //au changement de l'input date d'envoi on modifie le tag min de date de livraison min a +2
 $('[name=dateEnvoi]').on('change', function(){
-console.log("test date"+$('[name=dateEnvoi]').val());
-var recupDate = $('[name=dateEnvoi]').val();
-var date = recupDate.split("-");
-var year = date[0];
-var month = date[1];
-var jour = date[2]
-var jourReceive = jour +2
+  console.log("test date"+$('[name=dateEnvoi]').val());
+  var recupDate = $('[name=dateEnvoi]').val();
+  var date = recupDate.split("-");
+  var year = date[0];
+  var month = date[1];
+  var jour = date[2]
+  var jourReceive = jour +2
   $('[name=dateLivraison]').min= jourReceive+"-"+month+"-"+year;
 
 });
