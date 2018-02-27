@@ -7,13 +7,23 @@ $typeCategorie=$_POST['type'];
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="../src/style.css" />
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="../src/script.js" charset="utf-8"></script>
-  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-  <link rel="stylesheet" href="../src/style.css" />
-    <title><?php echo $typeCategorie ;?></title>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script type="text/javascript">
+
+  $( function() {
+    } );
+  </script>
+
+  <title><?php echo $typeCategorie ;?></title>
 </head>
 <body>
 
@@ -33,7 +43,7 @@ $typeCategorie=$_POST['type'];
           <h4 id="titleCategorie"> <?php echo $typeCategorie ;?></h4>
         </div>
         <div class="modal-body" >
-          <form class="form-horizontal" action="/Popups_intern/Traitement/traitement.php" method="get";>
+          <form class="form-horizontal" action="/Popups_intern/Traitement/traitement.php" method="POST">
             <?php
             include ('../includes/php/'.$typeCategorie.'.php');
             ?>
