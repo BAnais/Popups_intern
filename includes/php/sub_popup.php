@@ -5,7 +5,7 @@
   <div class="col-sm-6 ">
     <input  type="radio" name="transporteur" value="Transporteur1" id="transporteurChoice1" data-display="block" data-divId="transporteurConditionYesRow" data-divname="contentTrCondYes" required>
     <label for="transporteurChoice1">Transporteur1</label>
-    <input type="radio" name="transporteur" value="Transporteur3" id="transporteurChoice3" data-display="block" data-divId="transporteurConditionYesRow"  data-divname="contentTrCondYes"required >
+    <input type="radio" name="transporteur" value="Transporteur3" id="transporteurChoice3" data-display="block" data-divId="transporteurConditionYesRow"  data-divname="contentTrCondYes" required >
     <label for="transporteurChoice3">Transporteur3</label>
   </div>
 </div>
