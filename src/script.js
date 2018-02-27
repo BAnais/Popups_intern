@@ -43,6 +43,9 @@ $('#myModal').on('show.bs.modal',function(){
     default:
     break;
   }
+$('#dataEnvoi').on('focus',function(){
+    $('#dateEnvoi').datepicker();
+  });
 });
 
 //detecte un clic bouton radio et réagis dynamiquement en fonction de ce dernier
@@ -81,6 +84,10 @@ $('input[type="radio"]').on('click',function(){
 
 });
 
+//au changement de l'input date d'envoi on modifie le tag min de date de livraison min a +2
+$('[name=dateEnvoi]').on('change', function(){
 
+  $('[name=dateLivraison]').attr('min', $(this).val()+2);
 
+});
 });
