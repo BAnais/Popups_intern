@@ -54,8 +54,17 @@ $('input[type="radio"]').on('click',function(){
   //si data('display')="block" alors on passe divname concernées required à true
   //sinon si = none alors on passe required à false
   if($(this).data('display') == "block"){
+    if($('[name=contentEnvGroup]')){
+      $('[name=NbColis]').attr('required','true');
+      $('[name=prixTransporteur]').attr('required','true');
+    }else{
       $('[name='+$(this).data('divname')+']').attr('required','true');
+    }
   }else if($(this).data('display') == "none"){
+    if($('[name=contentEnvGroup]')){
+      $('[name=NbColis]').removeAttr('required');
+      $('[name=prixTransporteur]').removeAttr('required');
+    }
     $('[name='+$(this).data('divname')+']').removeAttr('required');
   }
   //récupère le name des divs correspondantes dans data
