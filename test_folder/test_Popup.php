@@ -13,10 +13,10 @@
     <form class="form-horizontal" action="/Popups_intern/index.html" method="post">
 
       <div class="row" id="envGroupRow">
-        <div class="col-sm-3 contentRow">
+        <div class="col-sm-3 ">
           <label>Envoi Groupé : </label>
         </div>
-        <div class="col-sm-6 contentRow">
+        <div class="col-sm-6 ">
           <input type="radio" name="groupe" value="yes" id="EnvGroupYes" data-display="block" data-divId="nbColisRow" data-divname="contentEnvGroup">
           <label for="EnvGroupYes">Oui</label>
           <input type="radio" name="groupe" value="no" id="EnvGroupNo" data-display="none" data-divId="nbColisRow">
@@ -35,10 +35,10 @@
         </div>
 
         <div class="row">
-          <div class="col-sm-3 contentRow" name="contentEnvGroup">
+          <div class="col-sm-3 " name="contentEnvGroup">
             <label>Prix Transporteur</label>
           </div>
-          <div class="col-sm-6 contentRow" name="contentEnvGroup">
+          <div class="col-sm-6 " name="contentEnvGroup">
             <input type="text" name="prixTransporteur" placeholder="XXX €">
           </div>
         </div>
@@ -47,10 +47,10 @@
 
 
       <div class="row">
-        <div class="col-sm-3 contentRow">
+        <div class="col-sm-3 ">
           <label>Déploiement : </label>
         </div>
-        <div class="col-sm-6 contentRow">
+        <div class="col-sm-6 ">
           <input type="radio" name="deploiement" value="Yes" id="deploiementYes" data-display="block" data-divId="numDevisRow" data-divname="contentNumDevis">
           <label for="deploiementYes">Oui</label>
           <input type="radio" name="deploiement" value="No" id="deploiementNo" data-display="none" data-divId="numDevisRow">
@@ -68,10 +68,10 @@
       </div>
 
       <div class="row">
-          <div class="col-sm-3 contentRow">
+          <div class="col-sm-3 ">
             <label>Configuré : </label>
           </div>
-          <div class="col-sm-6 contentRow">
+          <div class="col-sm-6 ">
               <input type="radio" name="Configuration" value="Yes" id="ConfigureYes" data-display="block" data-divId="pMatos" data-divname="contentpMatos">
             <label for="ConfigureYes">Oui</label>
             <input type="radio" name="Configuration" value="No" id="ConfigureNo" data-display="none"  data-divId="pMatos">
@@ -88,10 +88,10 @@
       </div>
 
       <div class="row">
-        <div class="col-sm-3 contentRow">
+        <div class="col-sm-3 ">
           <label>Transporteur : </label>
         </div>
-        <div class="col-sm-6 contentRow">
+        <div class="col-sm-6 ">
           <input  type="radio" name="transporteur" value="Transporteur1" id="transporteurChoice1" data-display="block" data-divId="transporteurConditionYesRow" data-divname="contentTrCondYes">
           <label for="transporteurChoice1">Transporteur1</label>
           <input type="radio" name="transporteur" value="Transporteur3" id="transporteurChoice3"data-display="none" data-divId="transporteurConditionYesRow" >
@@ -112,36 +112,36 @@
       </div>
 
       <div class="row" >
-        <div class="col-sm-3 contentRow">
+        <div class="col-sm-3 ">
           <label>N° Suivi</label>
         </div>
-        <div class="col-sm-6 contentRow">
+        <div class="col-sm-6 ">
           <input type="text" name="numSuivi" placeholder="123456769">
         </div>
       </div>
 
       <div class="row">
-        <div class="col-sm-3 contentRow">
+        <div class="col-sm-3 ">
           <label>Date d'envoi</label>
         </div>
-        <div class="col-sm-6 contentRow">
+        <div class="col-sm-6 ">
           <input type="date" name="dateEnvoi" value="">
         </div>
       </div>
 
       <div class="row">
-        <div class="col-sm-3 contentRow">
+        <div class="col-sm-3 ">
           <label>Date livraison</label>
         </div>
-        <div class="col-sm-6 contentRow">
+        <div class="col-sm-6 ">
           <input type="date" name="dateLivraison">
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-3 contentRow">
+        <div class="col-sm-3 ">
           <label>Horaire :</label>
         </div>
-        <div class="col-sm-6 contentRow">
+        <div class="col-sm-6 ">
           <label>Entre :</label>
           <select name="Dheure">
             <option value="h">heure</option>
@@ -182,19 +182,19 @@
       </div>
 
       <div class="row">
-        <div class="col-sm-3 contentRow">
+        <div class="col-sm-3 ">
           <label>Raison d'envoi</label>
         </div>
-        <div class="col-sm-6 contentRow">
+        <div class="col-sm-6 ">
           <textarea name="raisonEnvoi" rows="5" cols="30" readonly="false" placeholder="Entrez la raison de l'envoi ici" ></textarea>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-sm-3 contentRow">
+        <div class="col-sm-3 ">
           <label>Langue</label>
         </div>
-        <div class="col-sm-6 contentRow">
+        <div class="col-sm-6 ">
           <input type="radio" name="langue" value="FR" id="FR1">
           <label for="FR1">FR</label>
           <input type="radio"  name="langue" value="EN" id="EN1">
@@ -203,10 +203,10 @@
       </div>
       <div class="row">
 
-        <div class="col-sm-3 contentRow">
+        <div class="col-sm-3 ">
           <label>Mail CC</label>
         </div>
-        <div class="col-sm-6 contentRow">
+        <div class="col-sm-6 ">
           <input type="email" name="emailCC" placeholder="exemple@entreprise.fr">
         </div>
       </div>

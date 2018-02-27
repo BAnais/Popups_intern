@@ -1,8 +1,8 @@
 <div class="row">
-  <div class="col-sm-3 contentRow">
+  <div class="col-sm-3 ">
     <label>Transporteur : </label>
   </div>
-  <div class="col-sm-6 contentRow">
+  <div class="col-sm-6 ">
     <input  type="radio" name="transporteur" value="Transporteur1" id="transporteurChoice1" data-display="block" data-divId="transporteurConditionYesRow" data-divname="contentTrCondYes" required>
     <label for="transporteurChoice1">Transporteur1</label>
     <input type="radio" name="transporteur" value="Transporteur3" id="transporteurChoice3" data-display="block" data-divId="transporteurConditionYesRow"  data-divname="contentTrCondYes"required >
@@ -23,36 +23,36 @@
 </div>
 
 <div class="row" >
-  <div class="col-sm-3 contentRow">
+  <div class="col-sm-3 ">
     <label>N° Suivi</label>
   </div>
-  <div class="col-sm-6 contentRow">
+  <div class="col-sm-6 ">
     <input type="text" name="numSuivi" placeholder="123456769" required>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-sm-3 contentRow">
+  <div class="col-sm-3 ">
     <label>Date d'envoi</label>
   </div>
-  <div class="col-sm-6 contentRow">
+  <div class="col-sm-6 ">
     <input type="date" name="dateEnvoi"  required>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-sm-3 contentRow">
+  <div class="col-sm-3 ">
     <label>Date livraison</label>
   </div>
-  <div class="col-sm-6 contentRow">
+  <div class="col-sm-6 ">
     <input type="date" name="dateLivraison" required>
   </div>
 </div>
 <div class="row">
-  <div class="col-sm-3 contentRow">
+  <div class="col-sm-3 ">
     <label>Horaire :</label>
   </div>
-  <div class="col-sm-6   contentRow">
+  <div class="col-sm-6   ">
     <label>  Entre :  </label>
     <select name="Dheure" required>
       <option disabled>Heure</option>
@@ -93,19 +93,19 @@
 </div>
 
 <div class="row">
-  <div class="col-sm-3 contentRow">
+  <div class="col-sm-3 ">
     <label>Raison d'envoi</label>
   </div>
-  <div class="col-sm-6 contentRow">
+  <div class="col-sm-6 ">
     <textarea name="raisonEnvoi" rows="5" cols="30" editable="true" placeholder="Entrez la raison de l'envoi ici" required></textarea>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-sm-3 contentRow">
+  <div class="col-sm-3 ">
     <label>Langue</label>
   </div>
-  <div class="col-sm-6 contentRow">
+  <div class="col-sm-6 ">
     <input type="radio" name="langue" value="FR" id="FR1" data-btn="Envoyer" required>
     <label for="FR1">FR</label>
     <input type="radio"  name="langue" value="EN" id="EN1" data-btn="Send" required>
@@ -114,10 +114,10 @@
 </div>
 <div class="row">
 
-  <div class="col-sm-3 contentRow">
+  <div class="col-sm-3 ">
     <label>Mail CC</label>
   </div>
-  <div class="col-sm-6 contentRow">
+  <div class="col-sm-6 ">
     <input type="email" name="emailCC" placeholder="exemple@entreprise.fr">
   </div>
 </div>

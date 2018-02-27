@@ -3,10 +3,10 @@ include ('../includes/html/sub_popup_Exp_Ret.html');
  ?>
 
 <div class="row">
-  <div class="col-sm-3 contentRow">
+  <div class="col-sm-3 ">
     <label>Matériel Connu:</label>
   </div>
-  <div class="col-sm-6 contentRow">
+  <div class="col-sm-6 ">
     <input type="radio" name="Connu" value="yes" id="ConnuYes" data-display="block" data-divId="numSerieRow" data-divname="contentNumSerie">
     <label for="ConnuYes"required>Oui</label>
     <input type="radio" name="Connu" value="no" id="ConnuNo" data-display="none" data-divId="numSerieRow">
