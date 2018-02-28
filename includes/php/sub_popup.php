@@ -15,9 +15,9 @@
     <label id="bonTr">Bon Transporteur : </label>
   </div>
   <div class="col-sm-6" >
-    <input type="radio" name="contentTrCondYes" value="yes" id="bonOui">
+    <input type="radio" name="contentTrCondYes" value="yes" id="bonOui" required>
     <label for="bonChoice1">Oui</label>
-    <input type="radio" name="contentTrCondYes" value="no" id="bonNon">
+    <input type="radio" name="contentTrCondYes" value="no" id="bonNon" required>
     <label for="bonChoice2">Non</label>
   </div>
 </div>
