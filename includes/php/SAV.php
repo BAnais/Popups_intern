@@ -1,9 +1,9 @@
 
 <div class="row">
-  <div class="col-lg-2 ">
+  <div class="col-lg-3 ">
     <label>Expédition : </label>
   </div>
-  <div class="col-lg-8 ">
+  <div class="col-lg-6 ">
     <input type="radio" name="expedition" value="yes" id="expYes" data-display="block" data-divId="savExpYesRow">
     <label for="expYes"required>Oui</label>
     <input type="radio" name="expedition" value="no" id="expNo" data-display="none" data-divId="savExpYesRow">

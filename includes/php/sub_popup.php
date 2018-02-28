@@ -65,7 +65,7 @@
   <div class="col-sm-6   ">
     <label>  Entre :  </label>
     <select name="Dheure" required>
-      <option disabled>Heure</option>
+      <option disabled selected value="">Heure</option>
       <?php for ($Dheure = 00 ; $Dheure <= 23 ; $Dheure++):
         $Dhour = sprintf("%02d", $Dheure);
         ?>
@@ -74,7 +74,7 @@
     </select>
     <label>  :  </label>
     <select name="Dminutes" required>
-      <option disabled><strong>Minutes</strong></option>
+      <option disabled selected value="">Minutes</option>
       <?php for ($Dminutes = 00 ; $Dminutes <= 59 ; $Dminutes++):
         $Dmin = sprintf("%02d", $Dminutes);
         ?>
@@ -83,7 +83,7 @@
     </select>
     <label>  Et : </label>
     <select name="Fheure" required>
-      <option disabled>Heure</option>
+      <option disabled selected value="">Heure</option>
       <?php for ($Fheure = 00 ; $Fheure <= 23 ; $Fheure++):
         $Fhour = sprintf("%02d", $Fheure);
         ?>
@@ -92,7 +92,7 @@
     </select>
     <label>  :  </label>
     <select name="Fminutes" required>
-      <option disabled>Minutes</option>
+      <option disabled selected value="">Minutes</option>
       <?php for ($Fminutes = 00 ; $Fminutes <= 59 ; $Fminutes++):
         $Fmin = sprintf("%02d", $Fminutes);
         ?>
@@ -107,7 +107,7 @@
     <label>Raison d'envoi</label>
   </div>
   <div class="col-sm-6 ">
-    <textarea name="raisonEnvoi" rows="5" cols="30" editable="true" placeholder="Entrez la raison de l'envoi ici" required></textarea>
+    <textarea style="resize: none; overflow: vertical;" name="raisonEnvoi" rows="5" cols="30" editable="true" placeholder="Entrez la raison de l'envoi ici" required></textarea>
   </div>
 </div>
 
