@@ -8,9 +8,9 @@ include ('../includes/html/sub_popup_Exp_Ret.html');
   </div>
   <div class="col-sm-6 ">
     <input type="radio" name="Connu" value="yes" id="ConnuYes" data-display="block" data-divId="numSerieRow" data-divname="contentNumSerie">
-    <label for="ConnuYes"required>Oui</label>
+    <label for="ConnuYes" required>Oui</label>
     <input type="radio" name="Connu" value="no" id="ConnuNo" data-display="none" data-divId="numSerieRow">
-    <label for="ConnuNo"required>No</label>
+    <label for="ConnuNo" required>Non</label>
   </div>
 </div>
 <div class="row" id="numSerieRow">
