@@ -22,6 +22,16 @@
   </div>
 </div>
 
+<div class="row">
+  <div class="col-sm-3 " >
+    <label>Prix Transporteur</label>
+  </div>
+  <div class="col-sm-6 " >
+    <input type="number" name="prixTransporteur" placeholder="XXX €">
+  </div>
+</div>
+
+
 <div class="row" >
   <div class="col-sm-3 ">
     <label>N° Suivi</label>
