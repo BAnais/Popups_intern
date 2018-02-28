@@ -77,7 +77,7 @@ $(document).ready(function(){
     if($(this).data('display') == "block"){
       if($(this).data('divname') == 'contentEnvGroup'){
         $('[name=NbColis]').attr('required','true');
-        $('[name=prixTransporteur]').attr('required','true');
+      //  $('[name=prixTransporteur]').attr('required','true');
       }else{
         if($(this).prop('id')=='ConnuYes'){
           $('[name=numSerie]').val('');
@@ -88,8 +88,8 @@ $(document).ready(function(){
       if($(this).data('divname') == 'contentEnvGroup'){
         $('[name=NbColis]').removeAttr('required');
         $('[name=NbColis]').val('');
-        $('[name=prixTransporteur]').removeAttr('required');
-        $('[name=prixTransporteur]').val('');
+    //    $('[name=prixTransporteur]').removeAttr('required');
+    //    $('[name=prixTransporteur]').val('');
       }else{
 
         $('[name='+$(this).data('divname')+']').removeAttr('required');
