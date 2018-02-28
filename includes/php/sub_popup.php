@@ -36,7 +36,7 @@
     <label>Date d'envoi</label>
   </div>
   <div class="col-sm-6 ">
-    <input type="date" name="dateEnvoi"  required>
+    <input type="text" name="dateEnvoi" required>
   </div>
 </div>
 
@@ -45,7 +45,7 @@
     <label>Date livraison</label>
   </div>
   <div class="col-sm-6 ">
-    <input type="date" name="dateLivraison" required>
+    <input type="text" name="dateLivraison" disabled required>
   </div>
 </div>
 <div class="row">
@@ -64,7 +64,7 @@
     </select>
     <label>  :  </label>
     <select name="Dminutes" required>
-      <option  disabled><strong>Minutes</strong></option>
+      <option disabled><strong>Minutes</strong></option>
       <?php for ($Dminutes = 00 ; $Dminutes <= 59 ; $Dminutes++):
         $Dmin = sprintf("%02d", $Dminutes);
         ?>
