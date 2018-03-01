@@ -1,4 +1,18 @@
 <div class="row">
+  <div class="col-sm-3">
+    <label>Association Ticket VE : </label>
+  </div>
+
+    <div class="col-xs-1">
+      <input type="text" readonly name="VE" value="VE">
+    </div>
+    <div class="col-xs-5">
+      <input type="text" name="assoVe" >
+    </div>
+  </div>
+
+
+<div class="row">
   <div class="col-sm-3 ">
     <label>Transporteur : </label>
   </div>
