@@ -125,5 +125,82 @@ $('[name=dateEnvoi]').on('change', function(){
   $('[name=dateLivraison]').min= jourReceive+"-"+month+"-"+year;
 
 });
+//au changement de l'heure de debut on enabled l'heure de fin
+//puis on empehche la selection des heures avant cette derniere
+$('[name=Dheure]').on('change',function(){
+  $('[name=Dminutes]').removeAttr('disabled');
+  var heure = $(this).val();
+  //disabled toutes les options <à la valeur choisie
+  for(var i=0; i<23; i++){
+    if(i<heure){
+    $('[name=Fheure] option').filter(function() {
+        return ($(this).text() == i);
+    }).prop('disabled', true);
+  }else if (i>=heure){
+    $('[name=Fheure] option').filter(function() {
+        return ($(this).text() == i);
+    }).removeAttr('disabled');
+  }
+}
+var minutes = $('[name=Dminutes]').val();
+if($('[name=Dheure]').val()==$('[name=Fheure]').val()){
+for(var i=0; i<=minutes; i++){
+  $('[name=Fminutes] option').filter(function() {
+      return ($(this).text() == i);
+  }).prop('disabled', true);
+}}
+  //si les heures sont différentes entre D et F alors enable toutes les Minutes fin
+  if($('[name=Dheure]').val()!==$('[name=Fheure]').val()){
+    var j =23;
+    while (j>=0) {
+      $('[name=Fminutes] option').filter(function() {
+          return ($(this).text() == j);
+      }).removeAttr('disabled');
+      j--;
+    }
+  }
+
+});
+
+
+$('[name=Dminutes]').on('change', function(){
+    $('[name=Fheure]').removeAttr('disabled');
+    var minutes = $(this).val();
+    for(var i=0; i<23; i++){
+      if(i<minutes){
+      $('[name=Fminutes] option').filter(function() {
+          return ($(this).text() == i);
+      }).prop('disabled', true);
+    }else if (i>=minutes){
+      $('[name=Fminutes] option').filter(function() {
+          return ($(this).text() == i);
+      }).removeAttr('disabled');
+    }
+  }
+
+    });
+
+//si on change d'abourd heure debut et heure fin avant minutes debut
+$('[name=Fheure]').on('change',function(){
+  $('[name=Fminutes]').removeAttr('disabled');
+  var minutes = $('[name=Dminutes]').val();
+  if($('[name=Dheure]').val()==$('[name=Fheure]').val()){
+  for(var i=0; i<=minutes; i++){
+    $('[name=Fminutes] option').filter(function() {
+        return ($(this).text() == i);
+    }).prop('disabled', true);
+  }
+}else{
+  var j =23;
+  while (j>=0) {
+    $('[name=Fminutes] option').filter(function() {
+        return ($(this).text() == j);
+    }).removeAttr('disabled');
+    j--;
+  }
+}
+});
+
+
 
 });
