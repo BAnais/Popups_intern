@@ -3,14 +3,13 @@
     <label>Association Ticket VE : </label>
   </div>
 
-    <div class="col-xs-1">
-      <input type="text" readonly name="VE" value="VE">
-    </div>
-    <div class="col-xs-5">
-      <input type="text" name="assoVe" >
-    </div>
+  <div class="col-xs-1">
+    <input type="text" readonly name="VE" value="VE">
   </div>
-
+  <div class="col-xs-5">
+    <input type="text" name="assoVe" required >
+  </div>
+</div>
 
 <div class="row">
   <div class="col-sm-3 ">
@@ -87,7 +86,7 @@
       <?php endfor; ?>
     </select>
     <label>  :  </label>
-    <select name="Dminutes" required>
+    <select name="Dminutes" required disabled>
       <option disabled selected value="">Minutes</option>
       <?php for ($Dminutes = 00 ; $Dminutes <= 59 ; $Dminutes++):
         $Dmin = sprintf("%02d", $Dminutes);
@@ -96,7 +95,7 @@
       <?php endfor; ?>
     </select>
     <label>  Et : </label>
-    <select name="Fheure" required>
+    <select name="Fheure" required disabled>
       <option disabled selected value="">Heure</option>
       <?php for ($Fheure = 00 ; $Fheure <= 23 ; $Fheure++):
         $Fhour = sprintf("%02d", $Fheure);
@@ -105,7 +104,7 @@
       <?php endfor; ?>
     </select>
     <label>  :  </label>
-    <select name="Fminutes" required>
+    <select name="Fminutes" required disabled>
       <option disabled selected value="">Minutes</option>
       <?php for ($Fminutes = 00 ; $Fminutes <= 59 ; $Fminutes++):
         $Fmin = sprintf("%02d", $Fminutes);
