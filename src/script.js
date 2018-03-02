@@ -133,15 +133,18 @@ $('[name=Dheure]').on('change',function(){
   //disabled toutes les options <à la valeur choisie
   for(var i=0; i<23; i++){
     if(i<heure){
+      //disabled toutes les options de Fheure inférieures à la valeur choisie dans Dheure
     $('[name=Fheure] option').filter(function() {
         return ($(this).text() == i);
     }).prop('disabled', true);
   }else if (i>=heure){
+      //enabled toutes les options de Fheure supérieures à la valeur choisie dans Dheure
     $('[name=Fheure] option').filter(function() {
         return ($(this).text() == i);
     }).removeAttr('disabled');
   }
 }
+//disabled les minutes de Fin si au changement de Dheure, Dheure == Fheure
 var minutes = $('[name=Dminutes]').val();
 if($('[name=Dheure]').val()==$('[name=Fheure]').val()){
 for(var i=0; i<=minutes; i++){
@@ -162,12 +165,12 @@ for(var i=0; i<=minutes; i++){
 
 });
 
-
 $('[name=Dminutes]').on('change', function(){
     $('[name=Fheure]').removeAttr('disabled');
     var minutes = $(this).val();
     for(var i=0; i<23; i++){
       if(i<minutes){
+        //idem dans on change Dheure sauf que les changements se font sur Fminutes
       $('[name=Fminutes] option').filter(function() {
           return ($(this).text() == i);
       }).prop('disabled', true);
@@ -177,9 +180,7 @@ $('[name=Dminutes]').on('change', function(){
       }).removeAttr('disabled');
     }
   }
-
     });
-
 //si on change d'abourd heure debut et heure fin avant minutes debut
 $('[name=Fheure]').on('change',function(){
   $('[name=Fminutes]').removeAttr('disabled');
