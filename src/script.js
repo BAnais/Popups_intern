@@ -90,9 +90,12 @@ $('input[type="radio"]').on('click',function(){
     }
 
   }
-  //récupère le name des divs correspondantes dans data
-  //  $('[name='+$(this).data('divname')+']').css('display','inline-'+$(this).data('display'));
-
+  //si l'id du bouton est expYes alors on met a required tous les champs de la classe isRequired à required
+  if($(this).prop('id')=='expYes'){
+    $('.isRequired').attr('required', 'true');
+  }else if($(this).prop('id')=='expNo'){
+    $('.isRequired').removeAttr('required');
+  }
   //quand un click sur btn radio transporteur on récupère sa value pour l'ajouter
   // au nom du bon (ligne suivante) et uncheck les radio bonTr au clic du Tr
   if($(this).attr('name')=='transporteur' && $(this).prop("checked") ){
@@ -104,13 +107,6 @@ $('input[type="radio"]').on('click',function(){
   if($(this).attr('name')=='langue' && $(this).prop("checked")){
     $('[name=btnSend]').val($(this).data('btn'));
   }
-  /*
-  //test console log
-  console.log($(this).attr('data-divId'));
-  console.log($(this).data('divname'));
-  console.log($(this).data('display'));
-  console.log($(this).val());
-  */
 
 });
 //au changement de l'input date d'envoi on modifie le tag min de date de livraison min a +2
@@ -134,74 +130,91 @@ $('[name=Dheure]').on('change',function(){
   for(var i=0; i<23; i++){
     if(i<heure){
       //disabled toutes les options de Fheure inférieures à la valeur choisie dans Dheure
-    $('[name=Fheure] option').filter(function() {
+      $('[name=Fheure] option').filter(function() {
         return ($(this).text() == i);
-    }).prop('disabled', true);
-  }else if (i>=heure){
+      }).prop('disabled', true);
+    }else if (i>=heure){
       //enabled toutes les options de Fheure supérieures à la valeur choisie dans Dheure
-    $('[name=Fheure] option').filter(function() {
+      $('[name=Fheure] option').filter(function() {
         return ($(this).text() == i);
-    }).removeAttr('disabled');
-  }
-}
-//disabled les minutes de Fin si au changement de Dheure, Dheure == Fheure
-var minutes = $('[name=Dminutes]').val();
-if($('[name=Dheure]').val()==$('[name=Fheure]').val()){
-for(var i=0; i<=minutes; i++){
-  $('[name=Fminutes] option').filter(function() {
-      return ($(this).text() == i);
-  }).prop('disabled', true);
-}}
-  //si les heures sont différentes entre D et F alors enable toutes les Minutes fin
-  if($('[name=Dheure]').val()!==$('[name=Fheure]').val()){
-    var j =23;
-    while (j>=0) {
-      $('[name=Fminutes] option').filter(function() {
-          return ($(this).text() == j);
       }).removeAttr('disabled');
-      j--;
     }
   }
+  //disabled les minutes de Fin si au changement de Dheure, Dheure == Fheure
+  var minutes = $('[name=Dminutes]').val();
+  if($('[name=Dheure]').val()==$('[name=Fheure]').val()){
+    for(var i=0; i<=minutes; i++){
+      $('[name=Fminutes] option').filter(function() {
+        return ($(this).text() == i);
+      }).prop('disabled', true);
+    }}
+    //si les heures sont différentes entre D et F alors enable toutes les Minutes fin
+    if($('[name=Dheure]').val()!==$('[name=Fheure]').val()){
+      var j =23;
+      while (j>=0) {
+        $('[name=Fminutes] option').filter(function() {
+          return ($(this).text() == j);
+        }).removeAttr('disabled');
+        j--;
+      }
+    }
 
-});
+  });
 
-$('[name=Dminutes]').on('change', function(){
+  $('[name=Dminutes]').on('change', function(){
     $('[name=Fheure]').removeAttr('disabled');
     var minutes = $(this).val();
     for(var i=0; i<23; i++){
       if(i<minutes){
         //idem dans on change Dheure sauf que les changements se font sur Fminutes
-      $('[name=Fminutes] option').filter(function() {
+        $('[name=Fminutes] option').filter(function() {
           return ($(this).text() == i);
-      }).prop('disabled', true);
-    }else if (i>=minutes){
-      $('[name=Fminutes] option').filter(function() {
+        }).prop('disabled', true);
+      }else if (i>=minutes){
+        $('[name=Fminutes] option').filter(function() {
           return ($(this).text() == i);
-      }).removeAttr('disabled');
+        }).removeAttr('disabled');
+      }
     }
-  }
-    });
-//si on change d'abourd heure debut et heure fin avant minutes debut
-$('[name=Fheure]').on('change',function(){
-  $('[name=Fminutes]').removeAttr('disabled');
-  var minutes = $('[name=Dminutes]').val();
-  if($('[name=Dheure]').val()==$('[name=Fheure]').val()){
-  for(var i=0; i<=minutes; i++){
-    $('[name=Fminutes] option').filter(function() {
-        return ($(this).text() == i);
-    }).prop('disabled', true);
-  }
-}else{
-  var j =23;
-  while (j>=0) {
-    $('[name=Fminutes] option').filter(function() {
-        return ($(this).text() == j);
-    }).removeAttr('disabled');
-    j--;
-  }
-}
-});
+  });
+  //si on change d'abourd heure debut et heure fin avant minutes debut
+  $('[name=Fheure]').on('change',function(){
+    $('[name=Fminutes]').removeAttr('disabled');
+    var minutes = $('[name=Dminutes]').val();
+    if($('[name=Dheure]').val()==$('[name=Fheure]').val()){
+      for(var i=0; i<=minutes; i++){
+        $('[name=Fminutes] option').filter(function() {
+          return ($(this).text() == i);
+        }).prop('disabled', true);
+      }
+    }else{
+      var j =23;
+      while (j>=0) {
+        $('[name=Fminutes] option').filter(function() {
+          return ($(this).text() == j);
+        }).removeAttr('disabled');
+        j--;
+      }
+    }
+  });
 
+
+  $('.btn-primary').submit(function(event){
+    event.preventDefault();
+    switch (document.title) {
+      case 'Expedition':
+
+      break;
+      default:
+
+    }
+    $.POST(
+      '../Traitement/traitement.php',
+      {
+
+      }
+    )
+  });
 
 
 });
