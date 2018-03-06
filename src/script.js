@@ -94,7 +94,13 @@ $('input[type="radio"]').on('click',function(){
   if($(this).prop('id')=='expYes'){
     $('.isRequired').attr('required', 'true');
   }else if($(this).prop('id')=='expNo'){
+    if($('.isRequired').is(':radio')){
+      $('.isRequired').prop('checked', false);
+    }else{
+      $('.isRequired').val("");
+    }
     $('.isRequired').removeAttr('required');
+
   }
   //quand un click sur btn radio transporteur on récupère sa value pour l'ajouter
   // au nom du bon (ligne suivante) et uncheck les radio bonTr au clic du Tr
@@ -199,20 +205,65 @@ $('[name=Dheure]').on('change',function(){
   });
 
 
-  $('.btn-primary').submit(function(event){
+  $('.ajax').submit(function(event){
     event.preventDefault();
+  var
+      AssoVe              = $('input[name=assoVe]').val(),
+      ticketVE            = $('input[name=VE]').val() + AssoVe,
+      HeureD              = $('select[name=Dheure]').val(),
+      MinutesD            = $('select[name=Dminutes]').val(),
+      Fheure              = $('select[name=Fheure]').val(),
+      Fminutes            = $('select[name=Fminutes]').val(),
+      horaireD            = HeureD + MinutesD,
+      horaireF            = Fheure + Fminutes;
+
+    if(horaireD!="" && horaireF!=""  &&horaireD >= horaireF){
+      alert("L'horaire de livraison ne peut être égale ou inférieure à l'horaire d'envoi ! ");
+    }
+  //  var RaisonSerialized = filter_var(Raison, FILTER_SANITIZE_STRING);
+
+    var content = {
+         "EnvoiGroupe "        : $('radio[name=groupe]').val(),
+         "NbColis"             : $('input[name=NbColis]').val(),
+         "Deploiement"         : $('radio[name=deploiement]').val(),
+         "NumDevis"            : $('input[name=contentNumDevis]').val(),
+         "VeNum"               : ticketVE,
+         "TransporteurName"    : $('radio[name=transporteur]').val(),
+         "BonTransporteur"     : $('radio[name=contentTrCondYes]').val(),
+         "PrixTransporteur"    : $('input[name=prixTransporteur]').val(),
+         "NumSuivi"            : $('input[name=numSuivi]').val(),
+         "DateEnvoi"           : $('input[name=dateEnvoi]').val(),
+         "DateLivraison"       : $('input[name=dateLivraison]').val(),
+         "HoraireDeb"          : horaireD,
+         "HoraireFin"          : horaireF,
+         "Raison"              : $('textarea[name=raisonEnvoi]').val(),
+         "Langue"              : $('radio[name=langue]').val(),
+         "MailCC"              : $('input[name=emailCC]').val()
+    }
     switch (document.title) {
       case 'Expedition':
-
+      var Configure       = $('radio[name=Configuration]').val();
+      content["Configure"] = Configure;
       break;
+
+      case 'Retour':
+      var  Connu       = $('radio[name=Connu]').val();
+      content["Connu"] = Connu;
+      break;
+
+      case 'SAV':
+      var     SavExp    = $('radio[name=expedition]').val();
+      content["SavExp"] = SavExp;
+      break;
+
       default:
-
+      break;
     }
-    $.POST(
-      '../Traitement/traitement.php',
-      {
-
+    $.post(
+      '../Traitement/traitement.php', content , function(status){
+        alert("Succesful, status :" + status);
       }
+
     )
   });
 
