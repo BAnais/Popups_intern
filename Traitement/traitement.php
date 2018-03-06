@@ -3,14 +3,12 @@
 
 
     foreach ($_POST as $key => $value) {
-        echo "<tr>";
-        echo "<td>";
+
         echo $key;
-        echo "</td>";
-        echo "<td>";
+        echo "  :  ";
         echo $value;
-        echo "</td>";
-        echo "</tr>";
+        echo "      ";
+
     }
 
 
