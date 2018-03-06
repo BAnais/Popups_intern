@@ -13,12 +13,6 @@ $typeCategorie=$_POST['type'];
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="../src/script.js" charset="utf-8"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script type="text/javascript">
-
-  $( function() {
-    } );
-  </script>
-
   <title><?php echo $typeCategorie ;?></title>
 </head>
 <body>
@@ -39,7 +33,19 @@ $typeCategorie=$_POST['type'];
           <h4 id="titleCategorie"> <?php echo $typeCategorie ;?></h4>
         </div>
         <div class="modal-body" >
-          <form class="form-horizontal" action="/Popups_intern/Traitement/traitement.php" method="POST">
+          <form class="form-horizontal ajax"  action="" >
+            <div class="row">
+              <div class="col-sm-3">
+                <label>Association Ticket VE : </label>
+              </div>
+
+              <div class="col-xs-1">
+                <input type="text" readonly name="VE" value="VE">
+              </div>
+              <div class="col-xs-5">
+                <input type="text" name="assoVe" required >
+              </div>
+            </div>
             <?php
             include ('../includes/php/'.$typeCategorie.'.php');
             ?>
