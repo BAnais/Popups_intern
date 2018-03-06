@@ -1,17 +1,4 @@
 <div class="row">
-  <div class="col-sm-3">
-    <label>Association Ticket VE : </label>
-  </div>
-
-  <div class="col-xs-1">
-    <input type="text" readonly name="VE" value="VE">
-  </div>
-  <div class="col-xs-5">
-    <input class="isRequired" type="text" name="assoVe" required >
-  </div>
-</div>
-
-<div class="row">
   <div class="col-sm-3 ">
     <label>Transporteur : </label>
   </div>
@@ -40,7 +27,7 @@
     <label>Prix Transporteur</label>
   </div>
   <div class="col-sm-6 " >
-    <input class="isRequired" type="number" name="prixTransporteur" placeholder="XXX €" required >
+    <input class="isRequired" type="number" name="prixTransporteur" min="0"placeholder="XXX €" required >
   </div>
 </div>
 
