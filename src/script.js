@@ -35,10 +35,9 @@ $('[name=dateEnvoi]').on('change', function(){
 });
 
 $('#myModal').on('show.bs.modal',function(){
-  console.log($('#titleCategorie').text());
   //sub_popup
   $('#transporteurConditionYesRow').css('display','none');
-
+console.log('TitleCatégorie:'+$('#titleCategorie').text());
   switch (document.title) {
     case "Expedition":
     // expedition.php
@@ -206,6 +205,16 @@ $('[name=Dheure]').on('change',function(){
 
 
   $('.ajax').submit(function(event){
+    var dateEnvoiD =$('input[name=dateEnvoi]').val(),
+        jourD = dateEnvoiD.substring(0,2),
+        moisD = dateEnvoiD.substring(3,5),
+        anneeD = dateEnvoiD.substring(6,10),
+        dateLivraisonF = $('input[name=dateEnvoi]').val(),
+        jourF = dateLivraisonF.substring(0,2),
+        moisF = dateLivraisonF.substring(3,5),
+        anneeF = dateLivraisonF.substring(6,10);
+        dateD=anneeD+'-'+moisD+'-'+jourD;
+        dateF=anneeF+'-'+moisF+'-'+jourF;
     event.preventDefault();
   var
       AssoVe              = $('input[name=assoVe]').val(),
@@ -214,45 +223,51 @@ $('[name=Dheure]').on('change',function(){
       MinutesD            = $('select[name=Dminutes]').val(),
       Fheure              = $('select[name=Fheure]').val(),
       Fminutes            = $('select[name=Fminutes]').val(),
-      horaireD            = HeureD + MinutesD,
-      horaireF            = Fheure + Fminutes;
+      horaireD            = HeureD +':'+ MinutesD,
+      horaireF            = Fheure +':'+ Fminutes;
 
-    if(horaireD!="" && horaireF!=""  &&horaireD >= horaireF){
+    if(horaireD!="" && horaireF!=""  && horaireD > horaireF){
       alert("L'horaire de livraison ne peut être égale ou inférieure à l'horaire d'envoi ! ");
     }
-  //  var RaisonSerialized = filter_var(Raison, FILTER_SANITIZE_STRING);
+
 
     var content = {
-         "EnvoiGroupe "        : $('radio[name=groupe]').val(),
+         "EnvoiGroupe"         : $('input[name=groupe]:checked').val(),
          "NbColis"             : $('input[name=NbColis]').val(),
-         "Deploiement"         : $('radio[name=deploiement]').val(),
+         "Deploiement"         : $('input[name=deploiement]:checked').val(),
          "NumDevis"            : $('input[name=contentNumDevis]').val(),
          "VeNum"               : ticketVE,
-         "TransporteurName"    : $('radio[name=transporteur]').val(),
-         "BonTransporteur"     : $('radio[name=contentTrCondYes]').val(),
+         "TransporteurName"    : $('input[name=transporteur]:checked').val(),
+         "BonTransporteur"     : $('input[name=contentTrCondYes]:checked').val(),
          "PrixTransporteur"    : $('input[name=prixTransporteur]').val(),
          "NumSuivi"            : $('input[name=numSuivi]').val(),
-         "DateEnvoi"           : $('input[name=dateEnvoi]').val(),
-         "DateLivraison"       : $('input[name=dateLivraison]').val(),
+         /*"DateEnvoi"           : $('input[name=dateEnvoi]').val(),*/
+         'DateEnvoi'           :  dateD,
+         //"DateLivraison"       : $('input[name=dateLivraison]').val(),
+         'DateLivraison'       :  dateF,
          "HoraireDeb"          : horaireD,
          "HoraireFin"          : horaireF,
          "Raison"              : $('textarea[name=raisonEnvoi]').val(),
-         "Langue"              : $('radio[name=langue]').val(),
-         "MailCC"              : $('input[name=emailCC]').val()
+         "Langue"              : $('input[name=langue]:checked').val(),
+         "MailCC"              : $('input[name=emailCC]').val(),
+         "TypeTraitement"      : $('#titleCategorie').text(),
+         "STticket"            : "ST000000000"
     }
     switch (document.title) {
       case 'Expedition':
-      var Configure       = $('radio[name=Configuration]').val();
+      var Configure       = $('input[name=Configuration]:checked').val();
       content["Configure"] = Configure;
       break;
 
       case 'Retour':
-      var  Connu       = $('radio[name=Connu]').val();
+      var  Connu       = $('input[name=Connu]:checked').val(),
+          numSerie     = $('text[name=numSerie]').val();
       content["Connu"] = Connu;
+      content["NumSerie"] = numSerie;
       break;
 
       case 'SAV':
-      var     SavExp    = $('radio[name=expedition]').val();
+      var     SavExp    = $('input[name=expedition]:checked').val();
       content["SavExp"] = SavExp;
       break;
 
