@@ -27,7 +27,7 @@
     <label>Prix Transporteur</label>
   </div>
   <div class="col-sm-6 " >
-    <input class="isRequired" type="number" name="prixTransporteur" min="0"placeholder="XXX €" required >
+    <input class="isRequired" type="number" name="prixTransporteur" min="0" placeholder="XXX €" required >
   </div>
 </div>
 
