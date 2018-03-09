@@ -30,7 +30,7 @@ $typeCategorie=$_POST['type'];
       <div class="modal-content">
         <div class="modal-header" >
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 id="titleCategorie"> <?php echo $typeCategorie ;?></h4>
+          <h4 id="titleCategorie"><?php echo $typeCategorie ;?></h4>
         </div>
         <div class="modal-body" >
           <form class="form-horizontal ajax"  action="" >
