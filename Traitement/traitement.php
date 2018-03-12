@@ -75,6 +75,7 @@ $req= $bdd->prepare('INSERT INTO packagemanagement(
   raison,
   langue,
   mailCC,
+  etat,
   fkTypeTraitement,
   fkSTticket,
   fkStockId,
@@ -99,6 +100,7 @@ VALUES(
   :raison,
   :langue,
   :mailCC,
+  :etat,
   :fkTypeTraitement,
   :fkSTticket,
   :fkStockId,
@@ -125,6 +127,7 @@ $req->execute(array(
   ':raison' => $_POST['Raison'],
   ':langue' => $_POST['Langue'],
   ':mailCC' => $_POST['MailCC'],
+  ':etat' => '1';
   ':fkTypeTraitement' => $typeTraitement,//id type traitement
   ':fkSTticket' => $_POST['STticket'], //numero ticket stock
   ':fkStockId' =>  $stockId, //id stock du matos
