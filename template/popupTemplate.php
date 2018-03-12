@@ -23,7 +23,7 @@ $typeCategorie=$_POST['type'];
       include ('../includes/php/'.$typeCategorie.'.php');
       ?>
       <div class="row">
-        <div class="col-sm-4 col-sm-offset-5 ">
+        <div class="col-xs-4 col-xs-offset-5 ">
             <input class="btn-primary" type="submit" name="btnSend" value="Ok">
         </div>
       </div>

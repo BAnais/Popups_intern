@@ -1,8 +1,8 @@
 <div class="row">
-  <div class="col-sm-3 ">
+  <div class="col-xs-3 ">
     <label>Transporteur : </label>
   </div>
-  <div class="col-sm-6 ">
+  <div class="col-xs-6 ">
     <input class="isRequired" type="radio" name="transporteur" value="Transporteur1" id="transporteurChoice1" data-display="block" data-divId="transporteurConditionYesRow" data-divname="contentTrCondYes" required>
     <label for="transporteurChoice1">Transporteur1</label>
     <input class="isRequired" type="radio" name="transporteur" value="Transporteur3" id="transporteurChoice3" data-display="block" data-divId="transporteurConditionYesRow"  data-divname="contentTrCondYes" required >
@@ -11,10 +11,10 @@
 </div>
 
 <div class="row" id="transporteurConditionYesRow">
-  <div class="col-sm-3" >
+  <div class="col-xs-3" >
     <label id="bonTr">Bon Transporteur : </label>
   </div>
-  <div class="col-sm-6" >
+  <div class="col-xs-6" >
     <input class="isRequired" type="radio" name="contentTrCondYes" value="yes" id="bonOui" required>
     <label for="bonChoice1">Oui</label>
     <input class="isRequired" type="radio" name="contentTrCondYes" value="no" id="bonNon" required>
@@ -23,46 +23,46 @@
 </div>
 
 <div class="row">
-  <div class="col-sm-3 " >
+  <div class="col-xs-3 " >
     <label>Prix Transporteur</label>
   </div>
-  <div class="col-sm-6 " >
+  <div class="col-xs-6 " >
     <input class="isRequired" type="number" name="prixTransporteur" min="0" placeholder="XXX €" required >
   </div>
 </div>
 
 
 <div class="row" >
-  <div class="col-sm-3 ">
+  <div class="col-xs-3 ">
     <label>N° Suivi</label>
   </div>
-  <div class="col-sm-6 ">
+  <div class="col-xs-6 ">
     <input class="isRequired" type="text" name="numSuivi" placeholder="123456769" required>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-sm-3 ">
+  <div class="col-xs-3 ">
     <label>Date d'envoi</label>
   </div>
-  <div class="col-sm-6 ">
+  <div class="col-xs-6 ">
     <input class="isRequired" type="text" name="dateEnvoi" required>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-sm-3 ">
+  <div class="col-xs-3 ">
     <label>Date livraison</label>
   </div>
-  <div class="col-sm-6 ">
+  <div class="col-xs-6 ">
     <input class="isRequired" type="text" name="dateLivraison" disabled required>
   </div>
 </div>
 <div class="row">
-  <div class="col-sm-3 ">
+  <div class="col-xs-3 ">
     <label>Horaire :</label>
   </div>
-  <div class="col-sm-6   ">
+  <div class="col-xs-6   ">
     <label>  Entre :  </label>
     <select class="isRequired" name="Dheure" required>
       <option disabled selected value="">Heure</option>
@@ -103,19 +103,19 @@
 </div>
 
 <div class="row">
-  <div class="col-sm-3 ">
+  <div class="col-xs-3 ">
     <label>Raison d'envoi</label>
   </div>
-  <div class="col-sm-6 ">
+  <div class="col-xs-6 ">
     <textarea class="isRequired" style="resize: none; overflow: vertical;" name="raisonEnvoi" rows="5" cols="30" editable="true" placeholder="Entrez la raison de l'envoi ici" required></textarea>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-sm-3 ">
+  <div class="col-xs-3 ">
     <label>Langue</label>
   </div>
-  <div class="col-sm-6 ">
+  <div class="col-xs-6 ">
     <input class="isRequired" type="radio" name="langue" value="FR" id="FR1" data-btn="Envoyer" required>
     <label for="FR1">FR</label>
     <input class="isRequired" type="radio"  name="langue" value="EN" id="EN1" data-btn="Send" required>
@@ -124,10 +124,10 @@
 </div>
 <div class="row">
 
-  <div class="col-sm-3 ">
+  <div class="col-xs-3 ">
     <label>Mail CC</label>
   </div>
-  <div class="col-sm-6 ">
+  <div class="col-xs-6 ">
     <input type="email" name="emailCC" placeholder="exemple@entreprise.fr">
   </div>
 </div>
