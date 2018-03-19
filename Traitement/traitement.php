@@ -127,7 +127,7 @@ $req->execute(array(
   ':raison' => $_POST['Raison'],
   ':langue' => $_POST['Langue'],
   ':mailCC' => $_POST['MailCC'],
-  ':etat' => '1';
+  ':etat' => '1',
   ':fkTypeTraitement' => $typeTraitement,//id type traitement
   ':fkSTticket' => $_POST['STticket'], //numero ticket stock
   ':fkStockId' =>  $stockId, //id stock du matos

@@ -1,6 +1,5 @@
 <?php
 $typeCategorie=$_GET['troublesCode2'];
-
 ?>
 <!DOCTYPE html>
 <html>

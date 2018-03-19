@@ -282,12 +282,27 @@ $('[name=Dheure]').on('change',function(){
       default:
       break;
     }
-    $.post(
-      '../Traitement/traitement.php', content , function(status){
-        alert("Succesful, status :" + status);
-      }
 
-    )
+          var url = "../Traitement/traitement.php";
+          var urlRand = new Date().getTime();
+
+          $.ajax({
+            cache: false,
+            crossDomain: true,
+            type: 'POST',
+            url: url,
+            data: content,
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            success : function(data){
+              alert("ouke ouke");
+            },
+            error: function(jqXHR, exception){
+              alert('ERROR: jqXHR, exception', jqXHR, exception);
+            }
+          }).done(function(data){
+            window.close();
+          });
   });
 
 
