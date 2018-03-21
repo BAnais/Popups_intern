@@ -282,7 +282,7 @@ $('[name=Dheure]').on('change',function(){
       default:
       break;
     }
-
+/*
           var url = "../Traitement/traitement.php";
           var urlRand = new Date().getTime();
 
@@ -302,7 +302,14 @@ $('[name=Dheure]').on('change',function(){
             }
           }).done(function(data){
             window.close();
-          });
+          });*/
+          $.get("../test_folder/testGetAjax.php", function(data){
+  $("body")
+  .append(" Name : " + data.name)
+  .append(" Time : " + data.time)
+  .append(" Co   : " + data.co)
+  .append(' select : ' + data.select);
+}, "json");
   });
 
 
