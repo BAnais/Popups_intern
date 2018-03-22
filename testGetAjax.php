@@ -1,28 +1,34 @@
 <?php
+/*
 $host = "localhost";
 $user = "root";
 $password = "";
-$database = "test11";
-try
-        {
-            // Create connection to MYSQL database
-            // Fourth true parameter will allow for multiple connections to be made
-            $db_connection = mysql_connect ($host, $user, $password, true);
-            mysql_select_db ($database);
-            if (!$db_connection)
-            {
-                throw new Exception('MySQL Connection Database Error: ' . mysql_error());
-                $co = false;
-            }
-            else
-            {
-                $co = true;
-            }
-        }
-        catch (Exception $e)
-        {
-            echo $e->getMessage();
-        }
+$database = "test";
+$mysql = mysql_connect("localhost", "root", "uotfh");*/
+$dsn = 'mysql:host=localhost;dbname=test';
+$username = 'root';
+$password = '';
+$options = array(
+    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
+);
 
-echo json_encode(array('name'=> 'John', 'time'=> '2pm', 'co' => $co));
+try {
+  $bdd = new PDO($dsn, $username, $password, $options);
+  $co="OK ";
+} catch (Exception $e) {
+  die('Erreur : '.$e->getMessage());
+  $co = "ERREUR";
+}
+/*
+if(mysql_select_db($database, $mysql)){
+    $co= "databse exists";
+}else{
+    $co= "Databse does not exists";
+}*/
+$query = $bdd->prepare( 'SELECT * FROM packagemanagement');
+$query->execute();
+$result =$query->fetch();
+
+echo json_encode(array('result'=>$result));
+//array('name'=> 'John', 'time'=> '2pm', 'co' => $co, 'query' => $query
  ?>

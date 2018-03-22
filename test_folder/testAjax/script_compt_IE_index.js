@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function(event){
     event.preventDefault();
           $.get("testGetAjax.php", function(data){
   $("body")
-  .append(" nom : " + data.name + ",   time : " + data.time + ", co : " + data.co);
+//  .append(" nom : " + data.name + ",   time : " + data.time + ", co : " + data.co +', query : '+ data.query);
+  .append(data.result);
 }, "json");
   });
 
