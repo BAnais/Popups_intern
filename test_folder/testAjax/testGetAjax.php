@@ -29,6 +29,6 @@ $query = $bdd->prepare( 'SELECT * FROM packagemanagement');
 $query->execute();
 $result =$query->fetch();
 
-echo json_encode(array('result'=>$result));
+echo json_encode(array('result'=> $result));
 //array('name'=> 'John', 'time'=> '2pm', 'co' => $co, 'query' => $query
  ?>
