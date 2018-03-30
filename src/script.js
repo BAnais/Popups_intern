@@ -1,9 +1,25 @@
 document.addEventListener("DOMContentLoaded", function(event){
+  $(function () {
+      var isIE = window.ActiveXObject || "ActiveXObject" in window;
+      if (isIE) {
+          $('.modal').removeClass('fade');
+      }
+  });
+
   /*
   function openPopup(){
   document.window.open('', '_blank', 'width=200,height=700,scollbars=1,resizable=0');
 };
 */
+$('[name=dateEnvoi]').on('change', function(){
+
+  $('[name=dateLivraison]').removeAttr('disabled');
+  var dateSelected = new Date($.datepicker.parseDate("dd-mm-yy", $(this).val()));
+  dateSelected.setDate(dateSelected.getDate() + 2);
+
+  $('[name=dateLivraison]').datepicker("option", "minDate", dateSelected);
+
+});
 //doc pret
 $(document).ready(function(){
 
@@ -20,23 +36,11 @@ $(document).ready(function(){
   });
   //ouverture modal
   $("#myBtn").on('click',function(){
+    console.log("click click modal");
     $("#myModal").modal();
   });
-});
-
-$('[name=dateEnvoi]').on('change', function(){
-
-  $('[name=dateLivraison]').removeAttr('disabled');
-  var dateSelected = new Date($.datepicker.parseDate("dd-mm-yy", $(this).val()));
-  dateSelected.setDate(dateSelected.getDate() + 2);
-
-  $('[name=dateLivraison]').datepicker("option", "minDate", dateSelected);
-
-});
-
-$('#myModal').on('show.bs.modal',function(){
   //sub_popup
-  $('#transporteurConditionYesRow').css('display','none');
+  $('#isBonTransporteurRow').css('display','none');
 console.log('TitleCatégorie:'+$('#titleCategorie').text());
   switch (document.title) {
     case "Expedition":
@@ -93,10 +97,12 @@ $('input[type="radio"]').on('click',function(){
   if($(this).prop('id')=='expYes'){
     $('.isRequired').attr('required', 'true');
   }else if($(this).prop('id')=='expNo'){
+    //si exp à no alors on vide les champs et on enleve required
     if($('.isRequired').is(':radio')){
       $('.isRequired').prop('checked', false);
     }else{
-      $('.isRequired').val("");
+
+      $('.isRequired').val('');
     }
     $('.isRequired').removeAttr('required');
 
@@ -202,85 +208,10 @@ $('[name=Dheure]').on('change',function(){
       }
     }
   });
-
-
-  $('.ajax').submit(function(event){
-    var dateEnvoiD =$('input[name=dateEnvoi]').val(),
-        jourD = dateEnvoiD.substring(0,2),
-        moisD = dateEnvoiD.substring(3,5),
-        anneeD = dateEnvoiD.substring(6,10),
-        dateLivraisonF = $('input[name=dateEnvoi]').val(),
-        jourF = dateLivraisonF.substring(0,2),
-        moisF = dateLivraisonF.substring(3,5),
-        anneeF = dateLivraisonF.substring(6,10);
-        dateD=anneeD+'-'+moisD+'-'+jourD;
-        dateF=anneeF+'-'+moisF+'-'+jourF;
-    event.preventDefault();
-  var
-      AssoVe              = $('input[name=assoVe]').val(),
-      ticketVE            = $('input[name=VE]').val() + AssoVe,
-      HeureD              = $('select[name=Dheure]').val(),
-      MinutesD            = $('select[name=Dminutes]').val(),
-      Fheure              = $('select[name=Fheure]').val(),
-      Fminutes            = $('select[name=Fminutes]').val(),
-      horaireD            = HeureD +':'+ MinutesD,
-      horaireF            = Fheure +':'+ Fminutes;
-
-    if(horaireD!="" && horaireF!=""  && horaireD > horaireF){
-      alert("L'horaire de livraison ne peut être égale ou inférieure à l'horaire d'envoi ! ");
-    }
-
-
-    var content = {
-         "EnvoiGroupe"         : $('input[name=groupe]:checked').val(),
-         "NbColis"             : $('input[name=NbColis]').val(),
-         "Deploiement"         : $('input[name=deploiement]:checked').val(),
-         "NumDevis"            : $('input[name=contentNumDevis]').val(),
-         "VeNum"               : ticketVE,
-         "TransporteurName"    : $('input[name=transporteur]:checked').val(),
-         "BonTransporteur"     : $('input[name=contentTrCondYes]:checked').val(),
-         "PrixTransporteur"    : $('input[name=prixTransporteur]').val(),
-         "NumSuivi"            : $('input[name=numSuivi]').val(),
-         /*"DateEnvoi"           : $('input[name=dateEnvoi]').val(),*/
-         'DateEnvoi'           :  dateD,
-         //"DateLivraison"       : $('input[name=dateLivraison]').val(),
-         'DateLivraison'       :  dateF,
-         "HoraireDeb"          : horaireD,
-         "HoraireFin"          : horaireF,
-         "Raison"              : $('textarea[name=raisonEnvoi]').val(),
-         "Langue"              : $('input[name=langue]:checked').val(),
-         "MailCC"              : $('input[name=emailCC]').val(),
-         "TypeTraitement"      : $('#titleCategorie').text(),
-         "STticket"            : "ST000000000"
-    }
-    switch (document.title) {
-      case 'Expedition':
-      var Configure       = $('input[name=Configuration]:checked').val();
-      content["Configure"] = Configure;
-      break;
-
-      case 'Retour':
-      var  Connu       = $('input[name=Connu]:checked').val(),
-          numSerie     = $('text[name=numSerie]').val();
-      content["Connu"] = Connu;
-      content["NumSerie"] = numSerie;
-      break;
-
-      case 'SAV':
-      var     SavExp    = $('input[name=expedition]:checked').val();
-      content["SavExp"] = SavExp;
-      break;
-
-      default:
-      break;
-    }
-    $.post(
-      '../Traitement/traitement.php', content , function(status){
-        alert("Succesful, status :" + status);
-      }
-
-    )
-
-
-
+   $('.ajax').submit(function(event){
+     if(horaireD!="" && horaireF!=""  && horaireD > horaireF){
+            event.preventDefault();
+       alert("L'horaire de livraison ne peut être égale ou inférieure à l'horaire d'envoi ! ");
+     }
+   });
 });
