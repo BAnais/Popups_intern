@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", function(event){
+  $(function () {
+      var isIE = window.ActiveXObject || "ActiveXObject" in window;
+      if (isIE) {
+          $('.modal').removeClass('fade');
+      }
+  });
+
   /*
   function openPopup(){
   document.window.open('', '_blank', 'width=200,height=700,scollbars=1,resizable=0');
@@ -20,6 +27,7 @@ $(document).ready(function(){
   });
   //ouverture modal
   $("#myBtn").on('click',function(){
+    console.log("click click modal");
     $("#myModal").modal();
   });
 });
@@ -274,13 +282,35 @@ $('[name=Dheure]').on('change',function(){
       default:
       break;
     }
-    $.post(
-      '../Traitement/traitement.php', content , function(status){
-        alert("Succesful, status :" + status);
-      }
+/*
+          var url = "../Traitement/traitement.php";
+          var urlRand = new Date().getTime();
 
-    )
-
+          $.ajax({
+            cache: false,
+            crossDomain: true,
+            type: 'POST',
+            url: url,
+            data: content,
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            success : function(data){
+              alert("ouke ouke");
+            },
+            error: function(jqXHR, exception){
+              alert('ERROR: jqXHR, exception', jqXHR, exception);
+            }
+          }).done(function(data){
+            window.close();
+          });*/
+          $.get("../test_folder/testGetAjax.php", function(data){
+  $("body")
+  .append(" Name : " + data.name)
+  .append(" Time : " + data.time)
+  .append(" Co   : " + data.co)
+  .append(' select : ' + data.select);
+}, "json");
+  });
 
 
 });
