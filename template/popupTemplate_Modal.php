@@ -1,10 +1,10 @@
 <?php
-$STticket=$_REQUEST['ticketId'];
-$typeCategorie=$_REQUEST['troublesCode2'];
-$customerId=$_REQUEST['CustomerId'];
-$operatorTicket=$_REQUEST['operatorTicket'];//pb de recupération var vide
-$stockId=$_REQUEST['stockId'];
-$userId = $_REQUEST['userId'];
+$STticket='ST111111100000';
+$typeCategorie=$_REQUEST['type'];
+$customerId='fr31300003';
+$operatorTicket='stagiaire';//pb de recupération var vide
+$stockId='3366';
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,24 +12,24 @@ $userId = $_REQUEST['userId'];
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./popupStock/src/style.css" />
-  <link rel="stylesheet" href="./popupStock/src/libs/bootstrap/bootstrap_lib.css">
-  <link href="./popupStock/src/libs/jquery/jquery_ui.css" rel="stylesheet" type="text/css" />
-  <script src="./popupStock/src/libs/jquery/jquery_lib.js"></script>
-  <script src="./popupStock/src/libs/jquery/jquery_ui.js"></script>
-  <script src="./popupStock/src/libs/bootstrap/bootstrap_lib.js"></script>
-  <script src="./popupStock/src/script.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="../src/style.css" />
+  <link rel="stylesheet" href="../src/libs/bootstrap/bootstrap_lib.css">
+  <link href="../src/libs/jquery/jquery_ui.css" rel="stylesheet" type="text/css" />
+  <script src="../src/libs/jquery/jquery_lib.js"></script>
+  <script src="../src/libs/jquery/jquery_ui.js"></script>
+  <script src="../src/libs/bootstrap/bootstrap_lib.js"></script>
+  <script src="../src/script.js" charset="utf-8"></script>
   <title><?php echo $typeCategorie ;?></title>
 </head>
 <body>
 
   <div class="container">
     <h2 ><?php echo $typeCategorie ;?></h2>
-    <form class="form-horizontal ajax"  action="./popupStock/Traitement/traitement.php" method="POST" >
+    <form class="form-horizontal ajax"  action="../Traitement/traitement.php" method="POST" >
       <div class="hidden">
         <input type="hidden" name="STticket" value="<?php echo $STticket ?>">
         <input type="hidden" name="customerId" value="<?php echo $customerId ?>">
-        <input type="hidden" name="userId" value="<?php echo $userId ?>">
+        <input type="hidden" name="userId" value="<?php echo $operatorTicket ?>">
         <input type="hidden" name="stockId" value="<?php echo $stockId ?>">
         <input type="hidden" name="TypeTraitement" value="<?php echo $typeCategorie ?>">
       </div>
@@ -46,7 +46,7 @@ $userId = $_REQUEST['userId'];
         </div>
       </div>
       <?php
-      include ('./popupStock/includes/php/'.$typeCategorie.'.php');
+      include ('../includes/php/'.$typeCategorie.'.php');
       ?>
       <div class="row">
         <div class="col-xs-4 col-xs-offset-5 ">
