@@ -14,6 +14,32 @@ document.addEventListener("DOMContentLoaded", function(event){
 //doc pret
 $(document).ready(function(){
 
+  switch (document.title) {
+    case "Expedition":
+    // expedition.php
+    $('#pMatos').css('display','none');
+    //sub_popup_Exp_Ret
+    $('#nbColisRow').css('display','none');
+    $('#numDevisRow').css('display','none');
+    break;
+
+    case "Retour":
+    //Retour
+    $('#numSerieRow').css('display','none');
+    //sub_popup_Exp_Ret
+    $('#nbColisRow').css('display','none');
+    $('#numDevisRow').css('display','none');
+    break;
+
+    case "SAV":
+    //sav
+    $('#savExpYesRow').css('display','none');
+    break;
+
+    default:
+    break;
+  }
+
   $( "[name=dateEnvoi]" ).datepicker({ minDate: -0,
     showOtherMonths: true,
     selectOtherMonths: true,
