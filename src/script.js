@@ -127,13 +127,8 @@ $('input[type="radio"]').on('click',function(){
   if($(this).prop('id')=='expYes'){
     $('.isRequired').attr('required', 'true');
   }else if($(this).prop('id')=='expNo'){
-    if($('.isRequired').is(':radio')){
-      $('.isRequired').prop('checked', false);
-    }else{
-      $('.isRequired').val("");
-    }
+    $('.isRequired').prop('checked', false).val('');
     $('.isRequired').removeAttr('required');
-
   }
   //quand un click sur btn radio transporteur on récupère sa value pour l'ajouter
   // au nom du bon (ligne suivante) et uncheck les radio bonTr au clic du Tr
