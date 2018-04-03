@@ -25,7 +25,7 @@ $stockId='3366';
 
   <div class="container">
     <h2 ><?php echo $typeCategorie ;?></h2>
-    <form class="form-horizontal ajax"  action="../Traitement/traitement.php" method="POST" >
+    <form class="form-horizontal send"  action="../Traitement/traitement.php" method="POST" >
       <div class="hidden">
         <input type="hidden" name="STticket" value="<?php echo $STticket ?>">
         <input type="hidden" name="customerId" value="<?php echo $customerId ?>">
