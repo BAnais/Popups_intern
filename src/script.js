@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(event){
   $(function () {
-      var isIE = window.ActiveXObject || "ActiveXObject" in window;
-      if (isIE) {
-          $('.modal').removeClass('fade');
-      }
+    var isIE = window.ActiveXObject || "ActiveXObject" in window;
+    if (isIE) {
+      $('.modal').removeClass('fade');
+    }
   });
 
   /*
@@ -68,37 +68,6 @@ $('[name=dateEnvoi]').on('change', function(){
 
 });
 
-$('#myModal').on('show.bs.modal',function(){
-  //sub_popup
-  $('#transporteurConditionYesRow').css('display','none');
-console.log('TitleCatégorie:'+$('#titleCategorie').text());
-  switch (document.title) {
-    case "Expedition":
-    // expedition.php
-    $('#pMatos').css('display','none');
-    //sub_popup_Exp_Ret
-    $('#nbColisRow').css('display','none');
-    $('#numDevisRow').css('display','none');
-    break;
-
-    case "Retour":
-    //Retour
-    $('#numSerieRow').css('display','none');
-    //sub_popup_Exp_Ret
-    $('#nbColisRow').css('display','none');
-    $('#numDevisRow').css('display','none');
-    break;
-
-    case "SAV":
-    //sav
-    $('#savExpYesRow').css('display','none');
-    break;
-
-    default:
-    break;
-  }
-
-});
 
 //detecte un clic bouton radio et réagis dynamiquement en fonction de ce dernier
 $('input[type="radio"]').on('click',function(){
@@ -238,4 +207,31 @@ $('[name=Dheure]').on('change',function(){
     if(horaireD!="" && horaireF!=""  && horaireD > horaireF){
       alert("L'horaire de livraison ne peut être égale ou inférieure à l'horaire d'envoi ! ");
     }
+  });
+
+  $(window).bind('beforeunload', function () {
+
+    var http = new XMLHttpRequest();
+    var url = "../Traitement/traitementOnBeforeUnload.php";
+
+    var content = "json_name=" + JSON.stringify({
+      STticket:"test",
+      customerId:"onreadystatechange",
+      escalade:"eee",
+      userIdSelect:"grf",
+      etat:"grge"
+    })
+
+    http.onreadystatechange = function() {
+      if (http.readyState == XMLHttpRequest.DONE) {
+        alert(http.responseText);
+      }
+    }
+    http.open('POST', url, true);
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.send(content);
+
+
+
+  });
 });
